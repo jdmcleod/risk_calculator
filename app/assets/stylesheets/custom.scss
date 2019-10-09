@@ -1,0 +1,104 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import 'normalize';
+
+$black: black;
+$white: white;
+
+$primary: #2c5a8a;
+$light-primary: #4385cd;
+$info: #17a2b8;
+$stats: #00e1ff;
+$table-rows: #8beaff;
+$purple: #9e59ff;
+$light-purple: #aeaeff;
+
+.bg-primary {
+  background-color: $primary !important;
+}
+
+body {
+  font-family: Helvetica;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+// Sticky Footer
+.body {
+  flex: 1;
+}
+
+.navbar {
+  border-radius: 0px;
+}
+
+.footer {
+  font-size: 0.8rem;
+}
+// Sticky Footer End
+
+.panel {
+  background-color: $light-primary;
+  color: $white;
+  border-radius: 10px;
+}
+
+.table-wrapper{
+  border-radius: 15px;
+
+  background: $stats;
+  box-shadow: 0px 35px 50px rgba(35, 0, 191, 0.742);
+}
+
+.stats {
+  font-family: Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.table {
+  background-color: $primary;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.table td, .table th, .table thead th {
+  border: none;
+}
+
+.thead-primary th {
+  background-color: $primary;
+  color: $white;
+}
+
+.table tr:nth-child(even) {
+  color: $white;
+}
+
+.table tr:nth-child(odd) {
+  background-color: $table-rows;
+}
+
+.list-rolls {
+  background-color: $purple;
+  color: $white;
+  padding: 10px;
+  overflow: scroll;
+  height: 204px;
+}
+
+.undo-roll {
+  width: 100%;
+}
+
+.chart {
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: $white;
+}
+
+.col-md-5 {
+  margin-left: auto;
+  margin-right: auto;
+  float: none !important;
+}
