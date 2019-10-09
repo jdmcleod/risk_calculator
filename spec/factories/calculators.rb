@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :game do
+  factory :calculator do
     
   end
 end

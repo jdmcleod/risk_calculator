@@ -15,6 +15,9 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'slim-rails'
 gem 'bcrypt', '3.1.12'
+gem 'chartkick'
+gem 'random_name_generator'
+
 
 group :development, :test do
   gem 'sqlite3', '1.4'
@@ -50,16 +53,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :development, :test do
   gem 'factory_bot_rails'
   gem 'rspec-rails', '~> 4.0.0.beta2'
-end
-
-group :test do
-end
-
-group :development, :test do
-end
-
-group :development, :test do
-end
-
-group :test do
 end
