@@ -1,0 +1,6 @@
+example_id                                               | status  | run_time        |
+-------------------------------------------------------- | ------- | --------------- |
+./spec/controllers/calculators_controller_spec.rb[1:1:1] | passed  | 0.01385 seconds |
+./spec/helpers/calculators_helper_spec.rb[1:1]           | pending | 0.00001 seconds |
+./spec/models/calculator_spec.rb[1:1]                    | pending | 0.00001 seconds |
+./spec/views/calculators/index.html.slim_spec.rb[1:1]    | pending | 0.00001 seconds |
