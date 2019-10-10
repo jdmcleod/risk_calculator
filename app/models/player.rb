@@ -1,25 +1,28 @@
 class Player < ApplicationRecord
-  def update_win(luck:, undo: false)
-    win_value = undo ? -1 : 1
-    luck_value = undo ? -luck : luck
+  belongs_to :calculator
+  has_many :stats
 
-    @wins += win_value
-    @luckwins += luck_value
+  def update_win(luck:, undo: false)
+    update(win_value: undo ? -1 : 1)
+    update(luck_value: undo ? -luck : luck)
+    update(wins: wins += win_value)
+    update(luckwins: +=luck_value)
     update_ratios(undo: undo)
   end
 
   def update_loss(luck:, undo: false)
-    loss_value = undo ? -1 : 1
-    luck_value = undo ? -luck : luck
-
-    @losses += loss_value
-    @lucklosses += luck_value
+    update(win_value: undo ? -1 : 1)
+    update(luck_value: undo ? -luck : luck)
+    update(luck_value: += loss_value)
+    update(luck_losses: += luck_value)
     update_ratios(undo: undo)
   end
 
   def update_ratios(undo: false)
-    @ratio = (@losses.zero? ? @wins.to_f : @wins.to_f / @losses.to_f).round(2)
-    @luck = (@lucklosses.zero? ? @luckwins.to_f : @luckwins.to_f / @lucklosses.to_f).round(2)
+    ratio = (losses.zero? ? wins.to_f : wins.to_f / losses.to_f).round(2)
+    update(ratio: ratio)
+    luck = (@lucklosses.zero? ? @luckwins.to_f : @luckwins.to_f / @lucklosses.to_f).round(2)
+    update(luck: luck)
 
     undo ? @stats.pop() : @stats.push([@stats.length + 1, @luck])
   end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_10_020952) do
+ActiveRecord::Schema.define(version: 2019_10_10_205529) do
 
   create_table "calculators", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -41,6 +41,10 @@ ActiveRecord::Schema.define(version: 2019_10_10_020952) do
   create_table "rolls", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "player1"
+    t.string "player2"
+    t.string "die1"
+    t.string "die2"
   end
 
 end
