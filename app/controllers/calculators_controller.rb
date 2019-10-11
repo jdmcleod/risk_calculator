@@ -1,87 +1,55 @@
 class CalculatorsController < ApplicationController
   def index
+    @calculator = self
   end
 
-  def calculate
+  def new
+    @calculator = Calculator.new
   end
 
-  get '/calculate' do
-    @calculator = settings.calculator
-
-    slim :index
-  end
-
-  get '/' do
-    slim :info
-  end
-
-  get '/csv' do
-    @calculator = settings.calculator
-    content_type 'application/csv'
-    attachment "#{params[:name]}.csv"
-    CSV.generate do |csv|
-      @calculator.rolls.each do |roll|
-        csv << [roll.player1.name, roll.player2.name, roll.die1, roll.die2]
-      end
+  def create
+    @calculator = Calculator.new(calculator_params)
+    if @calculator.save
+      flash[:success] = "Welcome to the Sample App!"
+      redirect_to @calculator
+    else
+      render 'new'
     end
   end
 
-  get '/load' do
-    slim :load
+  def load
+
   end
 
-  get '/save' do
-    slim :save
-  end
+  # def new_player
+  #   name = params[:new_name]
+  #   @calculator = settings.calculator
 
-  post '/load' do
-    @calculator = settings.calculator
-    content = params['file'][:tempfile].read
-    content_arr = []
-    content.each_line do |line|
-        content_arr << [line]
-    end
-    @calculator.load_game(content_arr)
-    redirect '/calculate'
-  end
+  #   if name && name != ''
+  #     @calculator.find_or_add_player(name)
+  #   end
 
-  post '/new_player' do
-    name = params[:new_name]
-    @calculator = settings.calculator
+  #   redirect '/calculate'
+  # end
 
-    if name && name != ''
-      @calculator.find_or_add_player(name)
-    end
+  # def roll
+  #   @calculator = Calculator.find(params[:id])
+  #   @calculator.run_scenario(params[:winner], params[:loser], params[:roll_one].to_i, params[:roll_two].to_i)
 
-    redirect '/calculate'
-  end
+  #   redirect '/calculate'
+  # end
 
-  post '/roll' do
-    @calculator = settings.calculator
-    @calculator.run_scenario(params[:winner], params[:loser], params[:roll_one].to_i, params[:roll_two].to_i)
+  # def undo-roll
+  #   @calculator = settings.calculator
+  #   @calculator.undo_roll
 
-    redirect '/calculate'
-  end
+  #   redirect '/calculate'
+  # end
 
-  post '/undo-roll' do
-    @calculator = settings.calculator
-    @calculator.undo_roll
+  # def random
+  #   @calculator = settings.calculator
+  #   @calculator.ranm_scenario(params[:players].to_i, params[:rolls].to_i)
 
-    redirect '/calculate'
-  end
-
-  post '/random' do
-    @calculator = settings.calculator
-    @calculator.random_scenario(params[:players].to_i, params[:rolls].to_i)
-
-    redirect '/calculate'
-  end
-
-  post '/clear' do
-    @calculator = settings.calculator
-    @calculator.clear()
-
-    redirect '/calculate'
-  end
-end
+  #   redirect '/calculate'
+  # end
 end
