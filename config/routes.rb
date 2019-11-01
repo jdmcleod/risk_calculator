@@ -1,6 +1,18 @@
 Rails.application.routes.draw do
-  root 'calculators#info'
-  get 'calculate', to: 'calculators#index'
-  get 'new', to: 'calculators#new'
-  get 'load', to: 'calculators#load'
+  root 'sessions#new'
+  get 'sessions/new'
+
+  get 'users/new'
+  get 'signup', to: 'users#new'
+  post 'signup', to: 'users#create'
+  resources :users
+
+  get    '/login',   to: 'sessions#new'
+  post   '/login',   to: 'sessions#create'
+  delete '/logout',  to: 'sessions#destroy'
+
+  resources :calculators do
+    get 'load'
+  end
+
 end

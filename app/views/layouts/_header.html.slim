@@ -4,7 +4,6 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-primary
     span.navbar-toggler-icon
   #navbarSupportedContent.collapse.navbar-collapse
     ul.navbar-nav
-      - active = request.path_info == '/new' ? 'active' : ''
-      li.nav-item.nav-link.active = link_to "New Game", new_path
-      - active = request.path_info == '/load' ? 'active' : ''
-      li.nav-item.nav-link.active = link_to "Load game", load_path
+      li.nav-item.nav-link.active = link_to "New Game", new_calculator_path
+      = link_to "Logout", logout_path, method: :delete, class: "btn btn-danger"
+      / li.nav-item.nav-link.active = link_to "Load game", calculator_load_path

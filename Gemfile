@@ -17,12 +17,14 @@ gem 'slim-rails'
 gem 'bcrypt', '3.1.12'
 gem 'chartkick'
 gem 'random_name_generator'
+gem 'pg'
 
 
 group :development, :test do
-  gem 'sqlite3', '1.4'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry'
+  gem 'factory_bot_rails'
+  gem 'rspec-rails', '~> 4.0.0.beta2'
 end
 
 group :development do
@@ -44,13 +46,4 @@ group :test do
   gem 'rails-controller-testing'
 end
 
-group :production do
-  gem 'pg', '0.20.0'
-end
-
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-group :development, :test do
-  gem 'factory_bot_rails'
-  gem 'rspec-rails', '~> 4.0.0.beta2'
-end

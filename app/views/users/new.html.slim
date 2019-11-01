@@ -1,0 +1,17 @@
+.container
+  h1.light-header.p-2 Signup to play go fish!
+  .row
+    .col-md-6.m-auto
+      = form_for(@user, html: {class: "small"}) do |f|
+        = render 'shared/user_error_messages'
+        = f.label :name
+        = f.text_field :name, class: 'form-control'
+        = f.label :password
+        = f.password_field :password, class: 'form-control'
+        = f.label :password_confirmation, "Confirmation"
+        = f.password_field :password_confirmation, class: 'form-control'
+        .text-align-center.w-50.m-auto
+          = f.submit "Create my account", class: "btn btn-primary"
+        .mt-2
+          | Already have an account?
+          =<> link_to "Login", login_path

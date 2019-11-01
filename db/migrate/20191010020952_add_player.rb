@@ -1,6 +1,6 @@
 class AddPlayer < ActiveRecord::Migration[6.0]
   def change
-    change_table :players do |t|
+    create_table :players do |t|
       t.string :name
       t.integer :ratio
       t.integer :luck

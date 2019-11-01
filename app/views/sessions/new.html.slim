@@ -1,0 +1,15 @@
+.container
+  h1.light-header.p-2 Log in
+  .row
+    .col-md-6.m-auto
+      = form_for(:session, url: login_path, html: {class: "small"}) do |f|
+        = f.label :name
+        = f.text_field :name, class: 'form-control'
+
+        = f.label :password
+        = f.password_field :password, class: 'form-control'
+        .text-align-center.w-50.m-auto
+          = f.submit "Login", class: "btn btn-primary"
+        .mt-2
+          | New user?
+          =<> link_to "Sign up", signup_path
