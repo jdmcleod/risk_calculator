@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_01_213645) do
+ActiveRecord::Schema.define(version: 2019_11_05_140846) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,8 @@ ActiveRecord::Schema.define(version: 2019_11_01_213645) do
     t.integer "three_to_one_wins"
     t.integer "streak"
     t.integer "streak_count"
+    t.bigint "calculator_id"
+    t.index ["calculator_id"], name: "index_players_on_calculator_id"
   end
 
   create_table "rolls", force: :cascade do |t|
@@ -41,6 +43,8 @@ ActiveRecord::Schema.define(version: 2019_11_01_213645) do
     t.string "player2"
     t.string "die1"
     t.string "die2"
+    t.bigint "calculator_id"
+    t.index ["calculator_id"], name: "index_rolls_on_calculator_id"
   end
 
   create_table "users", force: :cascade do |t|

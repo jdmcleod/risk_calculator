@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.6.5'
 
 gem 'rails', '~> 6.0.0'
-gem 'bootstrap-sass', '3.4.1'
+gem 'bootstrap'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5'
 gem 'webpacker', '~> 4.0'

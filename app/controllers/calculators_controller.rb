@@ -52,4 +52,10 @@ class CalculatorsController < ApplicationController
 
   #   redirect '/calculate'
   # end
+
+  private
+
+    def calculator_params
+      params.require(:calculaotr).permit(:name)
+    end
 end

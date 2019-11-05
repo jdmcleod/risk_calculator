@@ -1,5 +1,5 @@
 .container
-  h1.light-header.p-2 Log in
+  h1.light-header.p-2.text-center Log in
   .row
     .col-md-6.m-auto
       = form_for(:session, url: login_path, html: {class: "small"}) do |f|
@@ -8,8 +8,8 @@
 
         = f.label :password
         = f.password_field :password, class: 'form-control'
-        .text-align-center.w-50.m-auto
-          = f.submit "Login", class: "btn btn-primary"
+        .m-auto.text-center
+          = f.submit "Login", class: "btn btn-primary w-50 mt-3"
         .mt-2
           | New user?
           =<> link_to "Sign up", signup_path

@@ -1,5 +1,5 @@
 .container
-  h1.light-header.p-2 Signup to play go fish!
+  h1.light-header.p-2.text-center Signup to play go fish!
   .row
     .col-md-6.m-auto
       = form_for(@user, html: {class: "small"}) do |f|
@@ -10,8 +10,8 @@
         = f.password_field :password, class: 'form-control'
         = f.label :password_confirmation, "Confirmation"
         = f.password_field :password_confirmation, class: 'form-control'
-        .text-align-center.w-50.m-auto
-          = f.submit "Create my account", class: "btn btn-primary"
+        .m-auto.text-center
+          = f.submit "Create my account", class: "btn btn-primary w-50 mt-3"
         .mt-2
           | Already have an account?
           =<> link_to "Login", login_path
