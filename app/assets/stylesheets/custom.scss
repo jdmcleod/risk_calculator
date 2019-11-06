@@ -29,12 +29,20 @@ body {
   flex: 1;
 }
 
+.white-link {
+  color: white;
+  &:hover {
+    color: grey
+  }
+
+  margin-right: 30px;
+}
+
 .footer-layout {
   position: fixed;
   bottom: 0;
   width: 100%;
 }
-
 
 .navbar {
   border-radius: 0px;

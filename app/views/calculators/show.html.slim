@@ -1,0 +1,109 @@
+.container
+  .row
+    .col-md-6
+      .card.panel.mt-4
+        .card-body
+          h5.card-title.text-center Roll
+          form action='/new_player' method='post'
+            .d-flex
+              input.form-control.mr-1 type='text' name='new_name' placeholder='Name'
+              button.btn.btn-secondary type='submit' Add Player
+          form action='/roll' method='post'
+            .row.mt-3
+              .col-md-9
+                .row
+                  .col-md-8
+                    select.form-control.player-dropdown#winner-dropdown name='winner'
+                      option disabled=true selected=true value='' Winner
+                      - @calculator.players.each do |person|
+                        option value=person.name = person.name
+                  .col-md-3
+                    select.form-control.number-dropdown name='roll_one'
+                      option 1
+                      option 2
+                      option 3
+                .row.mt-1
+                  .col-md-8
+                    select.form-control.player-dropdown#loser-dropdown name='loser'
+                      option disabled=true selected=true value='' Loser
+                      - @calculator.players.each do |person|
+                        option value=person.name = person.name
+                  .col-md-3
+                    select.form-control.number-dropdown name='roll_two'
+                      option 1
+                      option 2
+                      option 3
+              .row.col-md-3.justify-content-center
+                button.btn.btn-success#process-roll type='submit' disabled=true Process Roll
+
+      .card.panel.mt-2
+        .card-body
+          h5.card-title.text-center Random Game Generator
+          form action="/random" method="post"
+            .form-row.align-items-center.justify-content-center
+              .col-md-3
+                input.form-control.rng-input#players type='text' name='players' placeholder='#players'
+              .col-md-3
+                input.form-control.rng-input#rolls type='text' name='rolls' placeholder='#rolls'
+              .col-md-5
+                button.btn.btn-secondary.confirm#generate disabled="true" Generate
+    .col-md-6
+      .card.panel.mt-4
+        .card-body
+          h5.card-title.text-center Log
+          table.fl-table
+            tr
+              .list-rolls
+                / - @calculator.logs.each do |log|
+                  p = log
+                tr
+                  form action="/undo-roll" method="post"
+                    button.btn.btn-warning.undo-roll.mt-2 type="submit" Undo Roll
+  .row
+    .col-md-12
+      .mt-4.table-wrapper
+        h1.stats.text-center.p-2.m-0 Stats
+        table.table
+          thead
+            tr.text-center.thead-primary
+              th Player
+              th Wins
+              th Losses
+              th Adjusted Wins
+              th Adjusted Losses
+              th Ratio
+              th Luck (Adj wins/Adj losses)
+          tbody
+            - @calculator.sort_players&.each do |p|
+              tr.text-center
+                td = p.name
+                td = p.wins
+                td = p.losses
+                td = p.luckwins.round(2)
+                td = p.lucklosses.round(2)
+                td = p.ratio.round(2)
+                td = p.luck.round(2)
+  .row.chart.mt-5
+    .col-md-12
+      h5.stats.text-center Luck vs. Time
+      == line_chart( @calculator.players.map { |player| { name: player.name, data: player.stats } } )
+  .row
+    .col-md-5.chart
+      h5.stats.text-center 1-3 Wins
+      == pie_chart (@calculator.players.map { |player| [player.name, player.one_to_three_wins]})
+    .col-md-5.chart
+      h5.stats.text-center 3-1 losses
+      == pie_chart( @calculator.players.map { |player| [player.name, player.three_to_one_losses]} )
+  .row.chart
+    .col-md-12
+      h5.stats.text-center Total Rolls compared to Wins
+      == column_chart( @calculator.players.map { |player| { name: player.name, data: player.rolls_and_wins } } )
+  .row
+    .col-md-12.chart
+      h5.stats.text-center Win Streaks
+      == bar_chart (@calculator.players.map { |player| [player.name, player.streak]})
+  form action="/clear" method="post"
+    .form-row.align-items-center.justify-content-center.mb-5
+        button.btn.btn-danger.confirm Clear Session
+        a.btn.btn-info.ml-3 role="button" href="/save" method="get" Save Session
+

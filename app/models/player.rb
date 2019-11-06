@@ -6,15 +6,15 @@ class Player < ApplicationRecord
     update(win_value: undo ? -1 : 1)
     update(luck_value: undo ? -luck : luck)
     update(wins: wins += win_value)
-    update(luckwins: +=luck_value)
+    update(luckwins: luckwins +=luck_value)
     update_ratios(undo: undo)
   end
 
   def update_loss(luck:, undo: false)
     update(win_value: undo ? -1 : 1)
     update(luck_value: undo ? -luck : luck)
-    update(luck_value: += loss_value)
-    update(luck_losses: += luck_value)
+    update(luck_value: luck_value += loss_value)
+    update(luck_losses: luck_value += luck_value)
     update_ratios(undo: undo)
   end
 

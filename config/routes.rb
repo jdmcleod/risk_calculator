@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
 
+  get     '/info',   to: 'calculators#info'
+
   resources :calculators do
     get 'load'
   end

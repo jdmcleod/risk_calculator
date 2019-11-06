@@ -7,10 +7,14 @@ class CalculatorsController < ApplicationController
     @calculator = Calculator.new
   end
 
+  def show
+    @calculator = Calculator.find(params[:id])
+  end
+
   def create
-    @calculator = Calculator.new(calculator_params)
+    @calculator = Calculator.new(name: params[:calculator][:name], user: current_user)
     if @calculator.save
-      flash[:success] = "Welcome to the Sample App!"
+      flash[:success] = "Game created"
       redirect_to @calculator
     else
       render 'new'
@@ -52,10 +56,4 @@ class CalculatorsController < ApplicationController
 
   #   redirect '/calculate'
   # end
-
-  private
-
-    def calculator_params
-      params.require(:calculaotr).permit(:name)
-    end
 end

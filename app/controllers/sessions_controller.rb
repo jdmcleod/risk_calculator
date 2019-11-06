@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
   skip_before_action :logged_in_user, only: [:new, :create]
 
   def new
-    redirect_to games_url if logged_in?
+    redirect_to calculators_url if logged_in?
   end
 
   def create

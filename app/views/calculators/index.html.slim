@@ -1,2 +1,8 @@
-h1 Calculators#index
-p Find me in app/views/calculators/index.html.slim
+- content_for :header_right
+  = link_to "Logout", logout_path, method: :delete, class: 'white-link'
+.container
+  h1 = "Hi #{current_user.name}, these are your games"
+  .flex.flex-column
+    - current_user.calculators.each do |c|
+      = link_to "#{c.name}", c, class: 'btn btn-primary mt-3'
+

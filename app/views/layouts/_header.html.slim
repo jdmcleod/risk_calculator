@@ -1,9 +1,7 @@
 nav.navbar.navbar-expand-lg.navbar-dark.bg-primary
-  a.navbar-brand href='/' Risk Calculator
-  button.navbar-toggler aria-controls="navbarSupportedContent" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarSupportedContent" data-toggle="collapse" type="button"
-    span.navbar-toggler-icon
+  a.navbar-brand href='/info' Risk Calculator
   #navbarSupportedContent.collapse.navbar-collapse
-    ul.navbar-nav
-      li.nav-item.nav-link.active = link_to "New Game", new_calculator_path
-      = link_to "Logout", logout_path, method: :delete, class: "btn btn-danger"
-      / li.nav-item.nav-link.active = link_to "Load game", calculator_load_path
+    = link_to "Games", calculators_path, class: 'white-link'
+    = link_to "New Game", new_calculator_path, class: 'white-link'
+    == yield :header_right
+

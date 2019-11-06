@@ -1,7 +1,8 @@
-h1 Create game
-.row
-  .col-md-6.col-md-offset-3
-    = form_for(@calculator) do |f|
-      = f.label :name
-      = f.text_field :name, class: 'form-control'
-      = f.submit "Create game", class: "btn btn-primary"
+.container
+  h1 Create game
+  .row
+    .col-md-6.col-md-offset-3
+      = form_for(@calculator) do |f|
+        = f.label :name
+        = f.text_field :name, class: 'form-control'
+        = f.submit "Create game", class: "btn btn-primary mt-3"
