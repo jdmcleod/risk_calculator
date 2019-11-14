@@ -2,9 +2,11 @@ require 'random_name_generator'
 
 class Calculator < ApplicationRecord
   validates :name, presence: true
-  has_many :players
-  has_many :rolls
+  has_many :players, dependent: :destroy
+  has_many :rolls, dependent: :destroy
   belongs_to :user
+
+  attr_accessor :player_name
 
   # def run_scenario(player1_name, player2_name, die1, die2)
   #   player1 = find_or_add_player(player1_name)
@@ -93,20 +95,19 @@ class Calculator < ApplicationRecord
   #   @streak_holder = player.name
   # end
 
-  # def find_or_add_player(name)
-  #   player = @players.find { |p| p.name == name }
+  def find_or_add_player(name)
+    player = players.find_by(name: name)
 
-  #   if !player || @players.empty?
-  #     puts "New player (#{name}) added", ''
-  #     player = Player.new(name)
-  #     @players.push(player)
-  #   end
+    if !player || players.any?
+      puts "New player (#{name}) added", ''
+      player = Player.create(name: name, calculator: self)
+    end
 
-  #   player
-  # end
+    player
+  end
 
   def sort_players
-    return @players.sort_by(&:luck).reverse! if @players
+    return players.sort_by(&:luck).reverse! if players
     nil
   end
 
@@ -115,5 +116,13 @@ class Calculator < ApplicationRecord
   #   @rolls = []
   #   @log_messages = []
   # end
+
+   def destroy_players
+     self.players.destroy_all
+   end
+
+   def destroy_rolls
+     self.rolls.destroy_all
+   end
 end
 

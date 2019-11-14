@@ -21,6 +21,39 @@ class CalculatorsController < ApplicationController
     end
   end
 
+  def add_player
+    @calculator = Calculator.find(params[:id])
+    @calculator.find_or_add_player(params[:calculator][:player_name])
+    @calculator.save
+
+    redirect_to @calculator
+  end
+
+  def remove_player
+    @calculator = Calculator.find(params[:id])
+    @calculator.players.find_by(name: params[:name]).destroy
+    @calculator.save
+
+    redirect_to @calculator
+  end
+
+  def destroy
+    @calculator = Calculator.find(params[:id])
+    if @calculator.destroy
+      redirect_to calculators_path, flash: { success: "#{@calculator.name} deleted" }
+    else
+      render :index, flash: { error: "#{@calculator.name} could not be deleted" }
+    end
+  end
+
+  def clear
+    @calculator = Calculator.find(params[:id])
+    @calculator.destroy_players
+    @calculator.destroy_rolls
+
+    redirect_to @calculator
+  end
+
   def load
 
   end

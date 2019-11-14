@@ -14,7 +14,12 @@ Rails.application.routes.draw do
   get     '/info',   to: 'calculators#info'
 
   resources :calculators do
-    get 'load'
+    member do
+      patch 'clear'
+      patch 'remove_player'
+      get 'load'
+      patch 'add_player'
+    end
   end
 
 end
