@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_06_182851) do
+ActiveRecord::Schema.define(version: 2019_12_10_030223) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,13 +20,14 @@ ActiveRecord::Schema.define(version: 2019_11_06_182851) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id"
     t.string "name"
+    t.string "streak_holder"
     t.index ["user_id"], name: "index_calculators_on_user_id"
   end
 
   create_table "players", force: :cascade do |t|
     t.string "name"
-    t.integer "ratio"
-    t.integer "luck"
+    t.decimal "ratio"
+    t.decimal "luck"
     t.integer "wins"
     t.integer "losses"
     t.integer "luckwins"
@@ -36,6 +37,7 @@ ActiveRecord::Schema.define(version: 2019_11_06_182851) do
     t.integer "streak"
     t.integer "streak_count"
     t.bigint "calculator_id"
+    t.decimal "stats", default: [], array: true
     t.index ["calculator_id"], name: "index_players_on_calculator_id"
   end
 

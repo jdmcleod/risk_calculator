@@ -1,33 +1,53 @@
 class Player < ApplicationRecord
   belongs_to :calculator
-  has_many :stats
 
   def update_win(luck:, undo: false)
-    update(win_value: undo ? -1 : 1)
-    update(luck_value: undo ? -luck : luck)
-    update(wins: wins += win_value)
-    update(luckwins: luckwins +=luck_value)
+    win_value = undo ? -1 : 1
+    luck_value = undo ? -luck : luck
+    update(wins: self.wins += win_value)
+    update(luckwins: self.luckwins += luck_value)
     update_ratios(undo: undo)
+  end
+
+  def set_streak_to_zero
+    update(streak: 0, streak_count: 0)
   end
 
   def update_loss(luck:, undo: false)
-    update(win_value: undo ? -1 : 1)
-    update(luck_value: undo ? -luck : luck)
-    update(luck_value: luck_value += loss_value)
-    update(luck_losses: luck_value += luck_value)
+    loss_value = undo ? -1 : 1
+    luck_value = undo ? -luck : luck
+
+    update(losses: self.losses += loss_value)
+    update(lucklosses: self.lucklosses += luck_value)
     update_ratios(undo: undo)
   end
 
+  def one_to_three_win
+    update(one_to_three_wins: self.one_to_three_wins += 1)
+  end
+
+  def three_to_one_loss
+    update(three_to_one_wins: self.three_to_one_wins += 1)
+  end
+
   def update_ratios(undo: false)
-    ratio = (losses.zero? ? wins.to_f : wins.to_f / losses.to_f).round(2)
+    ratio = (self.losses.zero? ? self.wins.to_f : self.wins.to_f / self.losses.to_f)
     update(ratio: ratio)
-    luck = (@lucklosses.zero? ? @luckwins.to_f : @luckwins.to_f / @lucklosses.to_f).round(2)
+    luck = (self.lucklosses.zero? ? self.luckwins.to_f : self.luckwins.to_f / self.lucklosses.to_f)
     update(luck: luck)
 
-    undo ? @stats.pop() : @stats.push([@stats.length + 1, @luck])
+    undo ? update(stats: stats.last.delete) : update(stats: stats.push(luck))
+  end
+
+  def statsWithIndex
+    result = []
+    stats.each_with_index do |stat, i|
+      result.push([i, stat])
+    end
+    return result
   end
 
   def rolls_and_wins
-    return ["Total Rolls", @stats.length], ["Wins", @wins]
+    return ["Total Rolls", stats.length], ["Wins", wins]
   end
 end

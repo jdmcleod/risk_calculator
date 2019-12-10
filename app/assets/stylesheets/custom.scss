@@ -8,10 +8,10 @@ $white: white;
 $primary: #2c5a8a;
 $light-primary: #4385cd;
 $info: #17a2b8;
-$stats: #00e1ff;
+$stats: #d2d2d2;
 $table-rows: #8beaff;
-$purple: #9e59ff;
 $light-purple: #aeaeff;
+$grey: #2460a0;
 
 .bg-primary {
   background-color: $primary !important;
@@ -67,7 +67,7 @@ body {
   border-radius: 15px;
 
   background: $stats;
-  box-shadow: 0px 35px 50px rgba(35, 0, 191, 0.742);
+  // box-shadow: 0px 35px 50px rgba(35, 0, 191, 0.742);
 }
 
 .stats {
@@ -82,6 +82,7 @@ body {
 
 .table td, .table th, .table thead th {
   border: none;
+  vertical-align: middle;
 }
 
 .thead-primary th {
@@ -98,15 +99,20 @@ body {
 }
 
 .list-rolls {
-  background-color: $purple;
+  background-color: $grey;
   color: $white;
+  margin: 10px;
   padding: 10px;
   overflow: scroll;
-  height: 204px;
+  height: 115px;
+  width: 80%
 }
 
+.list-rolls::-webkit-scrollbar { width: 0 !important }
+
 .undo-roll {
-  width: 100%;
+  width: 20%;
+  margin: 10px;
 }
 
 .chart {
@@ -120,4 +126,9 @@ body {
   margin-left: auto;
   margin-right: auto;
   float: none !important;
+}
+
+p.roll-message {
+  margin: 0;
+  font-size: .8rem;
 }

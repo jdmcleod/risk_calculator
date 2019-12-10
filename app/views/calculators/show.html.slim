@@ -8,7 +8,7 @@
             .d-flex
                 = f.text_field :player_name, class: 'form-control', placeholder: "player name"
                 = f.submit "Add Player", class: "btn btn-success ml-2"
-          form action='/roll' method='post'
+          = form_for @roll, url: roll_calculator_path(@calculator) do |f|
             .row.mt-3
               .col-md-9
                 .row
@@ -34,31 +34,17 @@
                       option 2
                       option 3
               .row.col-md-3.justify-content-center
-                button.btn.btn-success#process-roll type='submit' disabled=true Process Roll
-
-      .card.panel.mt-2
-        .card-body
-          h5.card-title.text-center Random Game Generator
-          form action="/random" method="post"
-            .form-row.align-items-center.justify-content-center
-              .col-md-3
-                input.form-control.rng-input#players type='text' name='players' placeholder='#players'
-              .col-md-3
-                input.form-control.rng-input#rolls type='text' name='rolls' placeholder='#rolls'
-              .col-md-5
-                button.btn.btn-secondary.confirm#generate disabled="true" Generate
+                = f.submit 'Process Roll', class: 'btn btn-success', id: 'process-roll'
     .col-md-6
       .card.panel.mt-4
         .card-body
           h5.card-title.text-center Log
           table.fl-table
-            tr
+            .flex
               .list-rolls
                 - @calculator.rolls.each do |roll|
-                  p = roll
-                tr
-                  form action="/undo-roll" method="post"
-                    button.btn.btn-warning.undo-roll.mt-2 type="submit" Undo Roll
+                  p.roll-message = roll.to_s if roll.player1
+              = button_to "Undo Roll", undo_calculator_path, method: :patch, class: 'btn btn-warning undo-roll mt-2'
   .row
     .col-md-12
       .mt-4.table-wrapper
@@ -86,26 +72,26 @@
                 td = p.luck&.round(2)
                 td = button_to "Remove", remove_player_calculator_path(name: p.name), method: :patch, class: 'btn btn-danger m-1',
                     data: { confirm: "Are you sure you want to remove this player?"}
-  / .row.chart.mt-5
-  /   .col-md-12
-  /     h5.stats.text-center Luck vs. Time
-  /     == line_chart( @calculator.players.map { |player| { name: player.name, data: player.stats } } )
-  / .row
-  /   .col-md-5.chart
-  /     h5.stats.text-center 1-3 Wins
-  /     == pie_chart (@calculator.players.map { |player| [player.name, player.one_to_three_wins]})
-  /   .col-md-5.chart
-  /     h5.stats.text-center 3-1 losses
-  /     == pie_chart( @calculator.players.map { |player| [player.name, player.three_to_one_losses]} )
-  / .row.chart
-  /   .col-md-12
-  /     h5.stats.text-center Total Rolls compared to Wins
-  /     == column_chart( @calculator.players.map { |player| { name: player.name, data: player.rolls_and_wins } } )
-  / .row
-  /   .col-md-12.chart
-  /     h5.stats.text-center Win Streaks
-  /     == bar_chart (@calculator.players.map { |player| [player.name, player.streak]})
-  .flex.justify-center
+  .row.chart.mt-5
+    .col-md-12
+      h5.stats.text-center Luck vs. Time
+      == line_chart( @calculator.players.map { |player| { name: player.name, data: player.statsWithIndex } } )
+  .row
+    .col-md-5.chart
+      h5.stats.text-center 1-3 Wins
+      == pie_chart (@calculator.players.map { |player| [player.name, player.one_to_three_wins]})
+    .col-md-5.chart
+      h5.stats.text-center 3-1 losses
+      == pie_chart( @calculator.players.map { |player| [player.name, player.three_to_one_wins]} )
+  .row.chart
+    .col-md-12
+      h5.stats.text-center Total Rolls compared to Wins
+      == column_chart( @calculator.players.map { |player| { name: player.name, data: player.rolls_and_wins } } )
+  .row
+    .col-md-12.chart
+      h5.stats.text-center Win Streaks
+      == bar_chart (@calculator.players.map { |player| [player.name, player.streak]})
+  .flex.justify-center.mb-4
     = button_to "Clear Session", clear_calculator_path, method: :patch, class: 'btn btn-warning m-1',
       data: { confirm: "Are you sure you want clear all the data?"}
     = button_to "Delete Game", calculator_path(@calculator), method: :delete, class: 'btn btn-danger m-1',

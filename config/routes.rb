@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
   resources :calculators do
     member do
+      post 'roll'
+      patch 'undo'
       patch 'clear'
       patch 'remove_player'
       get 'load'
