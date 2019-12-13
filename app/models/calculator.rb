@@ -41,6 +41,7 @@ class Calculator < ApplicationRecord
       roll = rolls.last
 
       calculate_undo(roll.player1, roll.player2, roll.die1, roll.die2)
+      roll.destroy
     else
       puts "No rolls yet\n"
     end

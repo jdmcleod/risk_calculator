@@ -35,11 +35,15 @@ class Player < ApplicationRecord
     update(ratio: ratio)
     luck = (self.lucklosses.zero? ? self.luckwins.to_f : self.luckwins.to_f / self.lucklosses.to_f)
     update(luck: luck)
-
-    undo ? update(stats: stats.pop()) : update(stats: stats.push(luck))
+    if undo
+      stats.pop()
+      update(stats: stats)
+    else
+      update(stats: stats.push(luck))
+    end
   end
 
-  def statsWithIndex
+  def stats_with_index
     result = []
     stats.each_with_index do |stat, i|
       result.push([i, stat])
