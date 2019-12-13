@@ -30,12 +30,11 @@ class CalculatorsController < ApplicationController
     if !player || @calculator.players.count == 0
       flash[:success] = "Player #{name} added"
       player = @calculator.players.build(name: name, wins: 0, losses: 0, ratio: 0, luck: 0,
-        luckwins: 0, lucklosses: 0, one_to_three_wins: 0, three_to_one_wins: 0)
+        luckwins: 0, lucklosses: 0, one_to_three_wins: 0, three_to_one_wins: 0, stats: [])
       player.set_streak_to_zero
     else
       flash[:warning] = "#{name} already exists"
     end
-
 
     @calculator.save
 
@@ -83,11 +82,4 @@ class CalculatorsController < ApplicationController
 
     redirect_to @calculator
   end
-
-  # def random
-  #   @calculator = settings.calculator
-  #   @calculator.ranm_scenario(params[:players].to_i, params[:rolls].to_i)
-
-  #   redirect '/calculate'
-  # end
 end

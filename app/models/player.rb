@@ -36,7 +36,7 @@ class Player < ApplicationRecord
     luck = (self.lucklosses.zero? ? self.luckwins.to_f : self.luckwins.to_f / self.lucklosses.to_f)
     update(luck: luck)
 
-    undo ? update(stats: stats.last.delete) : update(stats: stats.push(luck))
+    undo ? update(stats: stats.pop()) : update(stats: stats.push(luck))
   end
 
   def statsWithIndex

@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 2019_12_10_030223) do
     t.integer "streak"
     t.integer "streak_count"
     t.bigint "calculator_id"
-    t.decimal "stats", default: [], array: true
+    t.json "stats"
     t.index ["calculator_id"], name: "index_players_on_calculator_id"
   end
 
