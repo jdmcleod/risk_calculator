@@ -2,7 +2,13 @@
   = link_to "Logout", logout_path, method: :delete, class: 'white-link'
 .container
   h1 = "Hi #{current_user.name}, these are your games"
-  .flex.flex-column
+  .game-container
     - current_user.calculators.each do |c|
-      = link_to "#{c.name}", c, class: 'btn btn-primary mt-3'
+      .game-panel
+        h3.text-align-center = "#{c.name}"
+        = link_to "Join", c, class: 'btn btn-primary mt-3'
+        = link_to "Delete", c, method: :delete, class: 'btn btn-danger mt-3',
+          data: { confirm: "Are you sure you want to delete this game?"}
+
+
 

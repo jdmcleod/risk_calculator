@@ -133,3 +133,20 @@ p.roll-message {
   margin: 0;
   font-size: .8rem;
 }
+
+.game-container {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+}
+
+.game-panel {
+  border-radius: 10px;
+  border: solid $primary;
+  width: 200px;
+  height: 175px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
