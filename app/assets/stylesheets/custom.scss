@@ -7,6 +7,7 @@ $white: white;
 
 $primary: #2c5a8a;
 $success: #90deb3;
+$danger: #d55555;
 $light-primary: #4385cd;
 $info: #17a2b8;
 $stats: #d2d2d2;
@@ -26,14 +27,18 @@ body {
 }
 
 h1 {
-  font-size: 1.7rem;
-  color: rgb(75, 75, 75);
-  margin-bottom: 0;
+  font-size: 1.7rem !important;
+  color: rgb(75, 75, 75) !important;
+  margin-bottom: 0 !important;
   text-align: center;
 }
 
 .container {
   max-width: 90%;
+}
+
+.card-body {
+  padding: 1rem;
 }
 
 // Sticky Footer
@@ -113,13 +118,14 @@ h1 {
 }
 
 .list-rolls {
-  background-color: rgb(210, 210, 210);
-  color: $white;
+  background-color: rgb(255, 255, 255);
+  color: $primary;
+  border-radius: 3px;
   margin: 10px;
   padding: 10px;
   overflow: scroll;
   height: 115px;
-  width: 80%
+  width: 500px;
 }
 
 .list-rolls::-webkit-scrollbar { width: 0 !important }
@@ -174,30 +180,51 @@ img.new-game {
   margin-left: 10px;
 }
 
+.btn {
+  border-width: 2px;
+}
+
 .btn-outline-primary {
-  border: solid $primary;
+  border-color: $primary;
   color: $primary;
 
   &:hover {
-    border: solid $primary;
+    border-color: $primary;
     background-color: $primary;
     color: white;
   }
 }
 
 .btn-outline-success {
-  border: solid $success;
+  border-color: $success;
   color: $success;
 
   &:hover {
-    border: solid $success;
+    border-color: $success;
     background-color: $success;
     color: white;
   }
 }
 
+.btn-outline-danger {
+  border-color: $danger;
+  color: $danger;
+
+  &:hover {
+    border-color: $danger;
+    background-color: $danger;
+    color: white;
+  }
+}
+
 #process-roll {
-  width: 60px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.process-roll-container {
+  display: flex;
+  justify-content: center;
 }
 
 .small-container {
@@ -207,15 +234,20 @@ img.new-game {
 
 
 @media only screen and (max-width: 770px) {
-  body {
-    .player-dropdown {
-      width: 70%;
-      margin: 5px auto 5px auto;
-    }
+  #process-roll {
+    padding-left: 100px;
+    padding-right: 110px;
+  }
 
-    .number-dropdown {
-      width: 70%;
-      margin: 5px auto 5px auto;
-    }
+  .process-roll-container {
+    margin: auto;
+  }
+
+  .player-dropdown {
+    margin: 5px;
+  }
+
+  .number-dropdown {
+    margin: 5px;
   }
 }

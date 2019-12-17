@@ -33,8 +33,8 @@
                       option 1
                       option 2
                       option 3
-              .row.col-md-3.justify-content-center
-                = f.submit 'Process Roll', class: 'btn btn-outline-success ml-4', id: 'process-roll'
+              .row.process-roll-container
+                = f.submit 'Roll', class: 'btn btn-outline-success ml-2', id: 'process-roll'
     .col-md-6
       .card.panel.mt-4
         .card-body
@@ -44,7 +44,7 @@
               .list-rolls
                 - @calculator.rolls.each do |roll|
                   p.roll-message = roll.to_s if roll.player1
-              = button_to "Undo Roll", undo_calculator_path, method: :patch, class: 'btn btn-warning undo-roll mt-2'
+              = button_to "Undo Roll", undo_calculator_path, method: :patch, class: 'btn btn-outline-warning undo-roll mt-2'
   .row
     .col-md-12
       .mt-4.table-wrapper
@@ -70,7 +70,7 @@
                 td = p.lucklosses&.round(2)
                 td = p.ratio&.round(2)
                 td = p.luck&.round(2)
-                td = button_to "Remove", remove_player_calculator_path(name: p.name), method: :patch, class: 'btn btn-danger m-1',
+                td = button_to "Remove", remove_player_calculator_path(name: p.name), method: :patch, class: 'btn btn-outline-danger m-1',
                     data: { confirm: "Are you sure you want to remove this player?"}
   .row.chart.mt-5
     .col-md-12
@@ -92,8 +92,8 @@
       h5.stats.text-center Win Streaks
       == bar_chart (@calculator.players.map { |player| [player.name, player.streak]})
   .flex.justify-center.mb-5
-    = button_to "Clear Session", clear_calculator_path, method: :patch, class: 'btn btn-warning m-1',
+    = button_to "Clear Session", clear_calculator_path, method: :patch, class: 'btn btn-outline-warning m-1',
       data: { confirm: "Are you sure you want clear all the data?"}
-    = button_to "Delete Game", calculator_path(@calculator), method: :delete, class: 'btn btn-danger m-1',
+    = button_to "Delete Game", calculator_path(@calculator), method: :delete, class: 'btn btn-outline-danger m-1',
       data: { confirm: "Are you sure you want to delete this game? The data will be erased forever"}
 
