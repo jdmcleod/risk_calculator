@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      flash[:success] = "Welcome to Go Fish!"
+      flash[:success] = "Successfully logged in"
       log_in @user
       redirect_to calculators_path
     else

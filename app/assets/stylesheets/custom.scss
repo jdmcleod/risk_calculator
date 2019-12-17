@@ -13,7 +13,7 @@ $info: #17a2b8;
 $stats: #d2d2d2;
 $table-rows: #8beaff;
 $light-purple: #aeaeff;
-$grey: #2460a0;
+$grey: #575757;
 
 .bg-primary {
   background-color: $primary !important;
@@ -119,7 +119,7 @@ h1 {
 
 .list-rolls {
   background-color: rgb(255, 255, 255);
-  color: $primary;
+  color: $grey;
   border-radius: 3px;
   margin: 10px;
   padding: 10px;
@@ -218,8 +218,8 @@ img.new-game {
 }
 
 #process-roll {
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .process-roll-container {
