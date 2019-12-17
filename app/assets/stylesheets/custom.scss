@@ -6,6 +6,7 @@ $black: black;
 $white: white;
 
 $primary: #2c5a8a;
+$success: #90deb3;
 $light-primary: #4385cd;
 $info: #17a2b8;
 $stats: #d2d2d2;
@@ -22,6 +23,13 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+h1 {
+  font-size: 1.7rem;
+  color: rgb(75, 75, 75);
+  margin-bottom: 0;
+  text-align: center;
 }
 
 .container {
@@ -45,11 +53,16 @@ body {
 .footer-layout {
   position: fixed;
   bottom: 0;
+  background: $primary;
   width: 100%;
 }
 
 .navbar {
   border-radius: 0px;
+}
+
+.navbar-text {
+  color: white;
 }
 
 .footer {
@@ -58,13 +71,14 @@ body {
 // Sticky Footer End
 
 .panel {
-  background-color: $light-primary;
+  background-color: $primary;
   color: $white;
   border-radius: 10px;
 }
 
 .table-wrapper{
   border-radius: 15px;
+  overflow: auto;
 
   background: $stats;
   // box-shadow: 0px 35px 50px rgba(35, 0, 191, 0.742);
@@ -99,7 +113,7 @@ body {
 }
 
 .list-rolls {
-  background-color: $grey;
+  background-color: rgb(210, 210, 210);
   color: $white;
   margin: 10px;
   padding: 10px;
@@ -141,12 +155,67 @@ p.roll-message {
 }
 
 .game-panel {
-  border-radius: 10px;
-  border: solid $primary;
   width: 200px;
-  height: 175px;
   margin-top: 40px;
   display: flex;
   flex-direction: column;
   padding: 10px;
+}
+
+.game-title {
+  font-size: 1rem;
+  color: rgb(75, 75, 75);
+}
+
+img.new-game {
+  width: 40px;
+  margin-bottom: 0;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.btn-outline-primary {
+  border: solid $primary;
+  color: $primary;
+
+  &:hover {
+    border: solid $primary;
+    background-color: $primary;
+    color: white;
+  }
+}
+
+.btn-outline-success {
+  border: solid $success;
+  color: $success;
+
+  &:hover {
+    border: solid $success;
+    background-color: $success;
+    color: white;
+  }
+}
+
+#process-roll {
+  width: 60px;
+}
+
+.small-container {
+  margin: auto;
+  width: 50%;
+}
+
+
+@media only screen and (max-width: 770px) {
+  body {
+    .player-dropdown {
+      width: 70%;
+      margin: 5px auto 5px auto;
+    }
+
+    .number-dropdown {
+      width: 70%;
+      margin: 5px auto 5px auto;
+    }
+  }
 }

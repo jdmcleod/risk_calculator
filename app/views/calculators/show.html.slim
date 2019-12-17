@@ -7,7 +7,7 @@
           = form_for @calculator, url: {action: 'add_player'} do |f|
             .d-flex
                 = f.text_field :player_name, class: 'form-control', placeholder: "player name"
-                = f.submit "Add Player", class: "btn btn-success ml-2"
+                = f.submit "Add Player", class: "btn btn-outline-success ml-2"
           = form_for @roll, url: roll_calculator_path(@calculator) do |f|
             .row.mt-3
               .col-md-9
@@ -34,7 +34,7 @@
                       option 2
                       option 3
               .row.col-md-3.justify-content-center
-                = f.submit 'Process Roll', class: 'btn btn-success', id: 'process-roll'
+                = f.submit 'Process Roll', class: 'btn btn-outline-success ml-4', id: 'process-roll'
     .col-md-6
       .card.panel.mt-4
         .card-body
@@ -91,7 +91,7 @@
     .col-md-12.chart
       h5.stats.text-center Win Streaks
       == bar_chart (@calculator.players.map { |player| [player.name, player.streak]})
-  .flex.justify-center.mb-4
+  .flex.justify-center.mb-5
     = button_to "Clear Session", clear_calculator_path, method: :patch, class: 'btn btn-warning m-1',
       data: { confirm: "Are you sure you want clear all the data?"}
     = button_to "Delete Game", calculator_path(@calculator), method: :delete, class: 'btn btn-danger m-1',

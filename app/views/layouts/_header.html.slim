@@ -1,7 +1,6 @@
-nav.navbar.navbar-expand-lg.navbar-dark.bg-primary
+nav.navbar.navbar-dark.bg-primary
   a.navbar-brand href='/info' Risk Calculator
-  #navbarSupportedContent.collapse.navbar-collapse
+  #navbarSupportedContent
     = link_to "Games", calculators_path, class: 'white-link'
-    = link_to "New Game", new_calculator_path, class: 'white-link'
     == yield :header_right
 
