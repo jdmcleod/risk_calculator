@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_10_030223) do
+ActiveRecord::Schema.define(version: 2019_12_18_044624) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,8 +30,8 @@ ActiveRecord::Schema.define(version: 2019_12_10_030223) do
     t.decimal "luck"
     t.integer "wins"
     t.integer "losses"
-    t.integer "luckwins"
-    t.integer "lucklosses"
+    t.decimal "luckwins"
+    t.decimal "lucklosses"
     t.integer "one_to_three_wins"
     t.integer "three_to_one_wins"
     t.integer "streak"
