@@ -4,6 +4,7 @@ ruby '2.6.5'
 
 gem 'rails', '~> 6.0.0'
 gem 'bootstrap'
+gem 'react-rails'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5'
 gem 'webpacker', '~> 4.0'

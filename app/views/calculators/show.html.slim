@@ -4,37 +4,34 @@
       .card.panel.mt-4
         .card-body
           h5.card-title.text-center Roll
-          = form_for @calculator, url: {action: 'add_player'} do |f|
-            .d-flex
-                = f.text_field :player_name, class: 'form-control', placeholder: "player name"
-                = f.submit "Add Player", class: "btn btn-outline-success ml-2"
-          = form_for @roll, url: roll_calculator_path(@calculator) do |f|
-            .row.mt-3
-              .col-md-9
-                .row
-                  .col-md-8
-                    select.form-control.player-dropdown#winner-dropdown name='winner'
-                      option disabled=true selected=true value='' Winner
-                      - @calculator.players.each do |person|
-                        option value=person.name = person.name
-                  .col-md-3
-                    select.form-control.number-dropdown name='roll_one'
-                      option 1
-                      option 2
-                      option 3
-                .row.mt-1
-                  .col-md-8
-                    select.form-control.player-dropdown#loser-dropdown name='loser'
-                      option disabled=true selected=true value='' Loser
-                      - @calculator.players.each do |person|
-                        option value=person.name = person.name
-                  .col-md-3
-                    select.form-control.number-dropdown name='roll_two'
-                      option 1
-                      option 2
-                      option 3
-              .row.process-roll-container
-                = f.submit 'Roll', class: 'btn btn-outline-success ml-2', id: 'process-roll'
+          = react_component("RollInput", { players: @calculator.players, id: @calculator.id })
+          / = form_for @roll, url: roll_calculator_path(@calculator) do |f|
+          /   .row.mt-3
+          /     .col-md-9
+          /       .row
+          /         .col-md-8
+          /           select.form-control.player-dropdown#winner-dropdown name='winner'
+          /             option disabled=true selected=true value='' Winner
+          /             - @calculator.players.each do |person|
+          /               option value=person.name = person.name
+          /         .col-md-3
+          /           select.form-control.number-dropdown name='roll_one'
+          /             option 1
+          /             option 2
+          /             option 3
+          /       .row.mt-1
+          /         .col-md-8
+          /           select.form-control.player-dropdown#loser-dropdown name='loser'
+          /             option disabled=true selected=true value='' Loser
+          /             - @calculator.players.each do |person|
+          /               option value=person.name = person.name
+          /         .col-md-3
+          /           select.form-control.number-dropdown name='roll_two'
+          /             option 1
+          /             option 2
+          /             option 3
+          /     .row.process-roll-container
+          /       = f.submit 'Roll', class: 'btn btn-outline-success ml-2', id: 'process-roll'
     .col-md-6
       .card.panel.mt-4
         .card-body
@@ -72,6 +69,10 @@
                 td = p.luck&.round(2)
                 td = button_to "Remove", remove_player_calculator_path(name: p.name), method: :patch, class: 'btn btn-outline-danger m-1',
                     data: { confirm: "Are you sure you want to remove this player?"}
+        tr = form_for @calculator, url: {action: 'add_player'} do |f|
+          .add-player-box
+            = f.text_field :player_name, class: 'form-control', placeholder: "player name"
+            = f.submit "Add Player", class: "btn btn-outline-info ml-2"
   .row.chart.mt-5
     .col-md-12
       h5.stats.text-center Luck vs. Time

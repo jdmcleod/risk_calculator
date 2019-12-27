@@ -95,8 +95,6 @@ h1 {
 
 .table {
   background-color: $primary;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
 }
 
 .table td, .table th, .table thead th {
@@ -182,6 +180,13 @@ img.new-game {
 
 .btn {
   border-width: 2px;
+}
+
+.add-player-box {
+  display: flex;
+  width: 50%;
+  float: right;
+  margin: 0 10px 10px 10px;
 }
 
 .btn-outline-primary {
