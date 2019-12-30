@@ -111,55 +111,35 @@ class Player < ApplicationRecord
   def input_roll(attacker, defender, winner, ratio, number)
     attacking = (attacker == name && winner == name)
     defending = (defender == name && winner == name)
-    won = winner == name
 
-    if ratio == '3-2'
-      roll_count["three_a_two_d"]["total"] += 1
+    ratio = translate_ratio(ratio)
+
+    if ratio == 'three_a_two_d' || ratio == 'two_a_two_d'
+      roll_count[ratio]['total'] += 1
       if attacking && number == '2'
-        roll_count["three_a_two_d"]["a_wins_two"]["count"] += 1
-        standard_percentage = roll_count["three_a_two_d"]["a_wins_two"]["standard_percentage"].to_f
-        total = roll_count["three_a_two_d"]["total"].to_f
-        count = roll_count["three_a_two_d"]["a_wins_two"]["count"].to_f
-        roll_count["three_a_two_d"]["a_wins_two"]["actual_percentage"] = total / count
-        actual_percentage = roll_count["three_a_two_d"]["a_wins_two"]["actual_percentage"].to_f
-        roll_count["three_a_two_d"]["a_wins_two"]["deviation"] = standard_percentage / actual_percentage
+        update_values(ratio, 'a_wins_two')
       elsif defending && number == '2'
-        roll_count["three_a_two_d"]["d_wins_two"]["count"] += 1
+        update_values(ratio, 'd_wins_two')
       else
-        roll_count["three_a_two_d"]["tie"]["count"] += 1
+        update_values(ratio, 'tie')
       end
-    end
-    # binding.pry
-  end
-
-  def update_win(luck:, undo: false)
-    win_value = undo ? -1 : 1
-    luck_value = undo ? -luck : luck
-    update(wins: self.wins += win_value)
-    update(luckwins: self.luckwins += luck_value)
-    update_ratios(undo: undo)
-  end
-
-  def update_loss(luck:, undo: false)
-    loss_value = undo ? -1 : 1
-    luck_value = undo ? -luck : luck
-
-    update(losses: self.losses += loss_value)
-    update(lucklosses: self.lucklosses += luck_value)
-    update_ratios(undo: undo)
-  end
-
-  def update_ratios(undo: false)
-    ratio = (self.losses.zero? ? self.wins.to_f : self.wins.to_f / self.losses.to_f)
-    update(ratio: ratio)
-    luck = (self.lucklosses.zero? ? self.luckwins.to_f : self.luckwins.to_f / self.lucklosses.to_f)
-    update(luck: luck)
-    if undo
-      stats.pop()
-      update(stats: stats)
     else
-      update(stats: stats.push(luck))
+      roll_count[ratio]['total'] += 1
+      update_values(ratio, 'a_wins') if attacking
+      update_values(ratio, 'd_wins') if defending
     end
+  end
+
+  def update_values(ratio_key, outcome_key)
+    roll_count[ratio_key][outcome_key]["count"] += 1
+
+    standard_percentage = roll_count[ratio_key][outcome_key]["standard_percentage"].to_f
+    total = roll_count[ratio_key]["total"].to_f
+    count = roll_count[ratio_key][outcome_key]["count"].to_f.round
+
+    roll_count[ratio_key][outcome_key]["actual_percentage"] = total / count
+    actual_percentage = roll_count[ratio_key][outcome_key]["actual_percentage"].to_f
+    roll_count[ratio_key][outcome_key]["deviation"] = (actual_percentage / standard_percentage).round(4)
   end
 
   def stats_with_index
@@ -184,5 +164,14 @@ class Player < ApplicationRecord
 
   def rolls_and_wins
     return ["Total Rolls", stats.length], ["Wins", wins]
+  end
+
+  def translate_ratio(ratio)
+    return 'three_a_two_d' if ratio == '3-2'
+    return 'two_a_two_d' if ratio == '2-2'
+    return 'one_a_two_d' if ratio == '1-2'
+    return 'three_a_one_d' if ratio == '3-1'
+    return 'two_a_one_d' if ratio == '2-1'
+    return 'one_a_one_d' if ratio == '1-1'
   end
 end

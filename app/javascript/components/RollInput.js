@@ -32,6 +32,7 @@ export default class RollInput extends React.Component {
                              winner: this.state.winner, dice_ratio: this.state.diceRatio,
                              number_wins: value })
     })
+    this.location.reload
   }
 
   handleButton(value) {
