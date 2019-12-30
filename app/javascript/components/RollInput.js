@@ -29,10 +29,10 @@ export default class RollInput extends React.Component {
       headers: { 'Content-Type': 'application/json' },
       method: 'POST',
       body: JSON.stringify({ attacker: this.state.attacker, defender: this.state.defender,
-                             winner: this.state.winner, dice_ratio: this.state.diceRatio,
-                             number_wins: value })
-    })
-    this.location.reload
+        winner: this.state.winner, dice_ratio: this.state.diceRatio,
+        number_wins: value })
+      })
+    window.location.reload(false)
   }
 
   handleButton(value) {

@@ -34,6 +34,7 @@ class CalculatorsController < ApplicationController
       player = @calculator.players.build(name: name, wins: 0, losses: 0, ratio: 0, luck: 0,
         luckwins: 0, lucklosses: 0, one_to_three_wins: 0, three_to_one_wins: 0, stats: [])
       player.set_streak_to_zero
+      player.initialize_roll_count
     else
       flash[:warning] = "#{name} already exists"
     end
@@ -80,7 +81,7 @@ class CalculatorsController < ApplicationController
         render :show
       end
       format.json {
-        redirect_to @calculator
+
       }
     end
   end
