@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_18_044624) do
+ActiveRecord::Schema.define(version: 2019_12_28_033600) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,11 @@ ActiveRecord::Schema.define(version: 2019_12_18_044624) do
     t.string "die1"
     t.string "die2"
     t.bigint "calculator_id"
+    t.string "attacker"
+    t.string "defender"
+    t.string "winner"
+    t.string "ratio"
+    t.integer "number"
     t.index ["calculator_id"], name: "index_rolls_on_calculator_id"
   end
 

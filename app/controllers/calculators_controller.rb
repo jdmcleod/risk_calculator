@@ -1,4 +1,6 @@
 class CalculatorsController < ApplicationController
+  skip_before_action :verify_authenticity_token, only: [:roll]
+
   def index
     @calculator = self
   end
@@ -69,10 +71,18 @@ class CalculatorsController < ApplicationController
 
   def roll
     @calculator = Calculator.find(params[:id])
-    @calculator.run_scenario(params[:winner], params[:loser], params[:roll_one].to_i, params[:roll_two].to_i)
+    @calculator.run_scenario(params[:attacker], params[:defender], params[:winner],
+    params[:dice_ratio], params[:number_wins].to_i)
     @calculator.save
 
-    redirect_to @calculator
+    respond_to do |format|
+      format.html do
+        render :show
+      end
+      format.json {
+        redirect_to @calculator
+      }
+    end
   end
 
   def undo
