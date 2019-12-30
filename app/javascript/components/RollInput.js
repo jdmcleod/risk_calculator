@@ -89,14 +89,23 @@ export default class RollInput extends React.Component {
   }
 
   _selectDiceRatio(value) {
-    this.setState((prevState) => {
-      return {
-        message: 'How many pieces did the winner take?',
-        diceRatio: value,
-        players: ['1', '2'],
-        selectPointer: 'number'
-      }
-    })
+    if (value === '3-2' || value === '2-2') {
+      this.setState((prevState) => {
+        return {
+          message: 'How many pieces did the winner take?',
+          diceRatio: value,
+          players: ['1', '2'],
+          selectPointer: 'number'
+        }
+      })
+    } else {
+        this.setState((prevState) => {
+          return {
+            diceRatio: value,
+          }
+        })
+      this.handleRoll('1') // magic number, doesn't matter what is put
+    }
   }
 
   _renderPlayers() {
