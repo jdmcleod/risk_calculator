@@ -8,21 +8,14 @@ class Calculator < ApplicationRecord
 
   attr_accessor :player_name
 
-  def run_scenario(player1_name, player2_name, die1, die2)
-    player1 = players.find_by(name: player1_name)
-    player2 = players.find_by(name: player2_name)
-    streak(player1)
-    rolls.build(player1: player1.name, player2: player2.name, die1: die1.to_s, die2: die2.to_s)
-
-    calculate(player1, player2, die1, die2)
-  end
-
-  def calculate(player1, player2, die1, die2)
-    luck = (die2.to_f / die1.to_f).round(2)
-    player1.one_to_three_win  if(die1 == 1 && die2 == 3)
-    player2.three_to_one_loss  if(die1 == 1 && die2 == 3)
-    player1.update_win(luck: luck)
-    player2.update_loss(luck: luck)
+  def run_scenario(attacker, defender, winner, ratio, number)
+    attacker = players.find_by(name: attacker)
+    defender = players.find_by(name: defender)
+    attacker.input_roll(attacker, defender, winner, ratio, number)
+    defender.input_roll(attacker, defender, winner, ratio, number)
+    streak(attacker)
+    rolls.build(attacker: attacker, defender: defender, winner: winner, ratio: ratio, number: number)
+    calculate(attacker, defender, winner, ratio, number)
   end
 
   def calculate_undo(player1_name, player2_name, die1, die2)

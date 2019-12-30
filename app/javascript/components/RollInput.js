@@ -47,7 +47,7 @@ export default class RollInput extends React.Component {
     else if (this.state.selectPointer === 'diceRatio') {
       this._selectDiceRatio(value)
     }
-    else {
+    else if (this.state.selectPointer === 'number'){
       this.handleRoll(value)
     }
   }
@@ -92,7 +92,8 @@ export default class RollInput extends React.Component {
       return {
         message: 'How many pieces did the winner take?',
         diceRatio: value,
-        players: ['1', '2']
+        players: ['1', '2'],
+        selectPointer: 'number'
       }
     })
   }
