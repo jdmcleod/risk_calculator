@@ -24,4 +24,12 @@ class JeopardyGamesController < ApplicationController
     end
   end
 
+  def destroy
+    @jeopardy_game = JeopardyGame.find(params[:id])
+    if @jeopardy_game.destroy
+      redirect_to jeopardy_games_path, flash: { success: "#{@jeopardy_game.name} deleted" }
+    else
+      render :index, flash: { error: "#{@jeopardy_game.name} could not be deleted" }
+    end
+  end
 end
