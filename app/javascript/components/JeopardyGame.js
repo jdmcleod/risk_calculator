@@ -1,5 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { confirmAlert } from 'react-confirm-alert'; // Import
+import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
 
 export default class JeopardyGame extends React.Component {
   static propTypes = {
@@ -61,13 +63,27 @@ export default class JeopardyGame extends React.Component {
   }
 
   removeCategory(categoryId) {
-    fetch(`/jeopardy_games/${this.props.id}/remove_category.json`, {
-      headers: { 'Content-Type': 'application/json' },
-      method: 'POST',
-      body: JSON.stringify({
-       category_id: categoryId
-      })
-    })
+    confirmAlert({
+      title: 'Delete',
+      message: 'Are you sure delete this category?',
+      buttons: [
+        {
+          label: 'Yes, delete it',
+          onClick: () => {
+            fetch(`/jeopardy_games/${this.props.id}/remove_category.json`, {
+              headers: { 'Content-Type': 'application/json' },
+              method: 'POST',
+              body: JSON.stringify({
+              category_id: categoryId
+              })
+            })
+          }
+        },
+        {
+          label: 'No',
+        }
+      ]
+    });
   }
 
   addPanel() {
