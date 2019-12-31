@@ -19,6 +19,7 @@ gem 'bcrypt', '3.1.12'
 gem 'chartkick'
 gem 'random_name_generator'
 gem 'pg'
+gem 'pusher'
 
 
 group :development, :test do

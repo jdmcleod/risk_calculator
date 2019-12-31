@@ -1,3 +1,3 @@
 class Panel < ApplicationRecord
-  belongs_to :jeopardy_game
+  belongs_to :category
 end

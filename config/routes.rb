@@ -24,6 +24,10 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :jeopardy_games
+  resources :jeopardy_games do
+    member do
+      post 'add_category'
+    end
+  end
 
 end

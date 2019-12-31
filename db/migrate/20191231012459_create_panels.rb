@@ -4,7 +4,7 @@ class CreatePanels < ActiveRecord::Migration[6.0]
       t.integer :ammount
       t.text :question
       t.text :answer
-      t.references :jeopardy_game, index: true
+      t.references :category, index: true
 
       t.timestamps
     end
