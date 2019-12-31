@@ -14,10 +14,10 @@ class JeopardyGamesController < ApplicationController
   end
 
   def create
-    @jeopardy_game = JeopardyGame.new(name: params[:name], user: current_user)
+    @jeopardy_game = JeopardyGame.new(name: params[:jeopardy_game][:name], user: current_user)
     if @jeopardy_game.save
       flash[:success] = "Game created"
-      redirect_to @jeopardy_games
+      render :index
     else
       flash[:danger] = "Error"
       render 'new'
