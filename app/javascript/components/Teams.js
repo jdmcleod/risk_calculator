@@ -11,9 +11,8 @@ export default class Teams extends React.Component {
     return this.props.teams.map(team => {
       return (
         <div key={team.name}>
-          <h5 className='text-align-center'>{team.name}</h5>
+          <button className='btn remove-player' onClick={() => this.props.removeTeam(team.id)}>{team.name}</button>
           <h5 className='text-align-center'>{team.score}</h5>
-          <button className='btn remove-player' onClick={() => this.props.removeTeam(team.id)}>remove</button>
         </div>
       )
     })
