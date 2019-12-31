@@ -30,6 +30,7 @@ Rails.application.routes.draw do
       post 'remove_category'
       post 'add_panel'
       post 'remove_panel'
+      patch 'edit_panel'
     end
   end
 

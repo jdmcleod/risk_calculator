@@ -39,7 +39,6 @@ class JeopardyGamesController < ApplicationController
 
   def remove_category
     @jeopardy_game = JeopardyGame.find(params[:id])
-    name = params[:jeopardy_game][:name]
     @jeopardy_game.categories.find(params[:category_id]).destroy
     @jeopardy_game.save
 
@@ -55,6 +54,38 @@ class JeopardyGamesController < ApplicationController
     question = params[:question]
     answer = params[:answer]
     @category.panels.create(ammount: ammount, question: question, answer: answer)
+    @category.save
+    @jeopardy_game.save
+
+    pusher_update_game
+
+    head :ok
+  end
+
+  def edit_panel
+    @jeopardy_game = JeopardyGame.find(params[:id])
+    @category = @jeopardy_game.categories.find(params[:category_id])
+    ammount = params[:ammount]
+    question = params[:question]
+    answer = params[:answer]
+
+    @category.panels.find(params[:panel_id]).update(ammount: ammount) if ammount != ''
+    @category.panels.find(params[:panel_id]).update(question: question) if question != ''
+    @category.panels.find(params[:panel_id]).update(question: question) if question != ''
+    @category.panels.find(params[:panel_id]).update(answer: answer) if answer != ''
+
+    @category.save
+    @jeopardy_game.save
+
+    pusher_update_game
+
+    head :ok
+  end
+
+  def remove_panel
+    @jeopardy_game = JeopardyGame.find(params[:id])
+    @category = @jeopardy_game.categories.find(params[:category_id])
+    @category.panels.find(params[:panel_id]).destroy
     @category.save
     @jeopardy_game.save
 
