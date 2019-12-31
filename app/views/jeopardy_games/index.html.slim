@@ -3,7 +3,7 @@
   = link_to "Logout", logout_path, method: :delete, class: 'white-link'
 .container
   .flex.justify-center
-    h1.games-title Games
+    h1.games-title Jeopardy Games
     = link_to image_tag('new-game', class: 'new-game'), new_jeopardy_game_path
   .game-container
     - current_user.jeopardy_games.each do |game|

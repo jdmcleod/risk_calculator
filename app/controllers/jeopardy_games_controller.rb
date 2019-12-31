@@ -5,8 +5,7 @@ class JeopardyGamesController < ApplicationController
   end
 
   def show
-    @jeopardy_game = Jeopardy.find(params[:id])
-    @roll = @jeopardy_game.rolls.build
+    @jeopardy_game = JeopardyGame.find(params[:id])
   end
 
   def new
