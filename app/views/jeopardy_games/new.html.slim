@@ -1,0 +1,9 @@
+
+.container
+  h1 Create game
+  .small-container
+    = form_for(@jeopardy_game) do |f|
+      = f.label :name
+      = f.text_field :name, class: 'form-control'
+      .flex.justify-center
+        = f.submit "Create game", class: "btn btn-outline-primary mt-3"

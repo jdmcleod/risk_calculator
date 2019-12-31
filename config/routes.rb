@@ -24,4 +24,6 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :jeopardy_games
+
 end
