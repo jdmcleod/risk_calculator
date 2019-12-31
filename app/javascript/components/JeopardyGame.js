@@ -18,6 +18,7 @@ export default class JeopardyGame extends React.Component {
       categoryId: '',
       showPanelForm: false,
       showQuestion: false,
+      showAnswer: false,
       panelAmmount: '',
       panelQuestion: '',
       panelAnswer: '',
@@ -136,8 +137,12 @@ export default class JeopardyGame extends React.Component {
     this.setState({ showQuestion: true, selectedPanel: panel })
   }
 
+  showAnswer(panel) {
+    this.setState({ showAnswer: true, selectedPanel: panel })
+  }
+
   hideQuestion() {
-    this.setState({ showQuestion: false })
+    this.setState({ showQuestion: false, showAnswer: false })
   }
 
   renderPanelForm() {
@@ -193,7 +198,19 @@ export default class JeopardyGame extends React.Component {
               <button className='btn btn-outline-primary m-1 close-panel' onClick={() => this.showPanelForm(this.state.selectedPanel.category_id, true)}>Edit</button>
             </div>
             <div className='question mt-3'>{this.state.selectedPanel.question}</div>
+            <button className='btn btn-outline-primary mt-5' onClick={() => this.showAnswer(this.state.selectedPanel)}>View Answer</button>
+            {this.renderAnswer()}
           </div>
+        </div>
+      )
+    }
+  }
+
+  renderAnswer() {
+    if (this.state.showAnswer) {
+      return (
+        <div className='answer mt-3'>
+          {this.state.selectedPanel.answer}
         </div>
       )
     }
