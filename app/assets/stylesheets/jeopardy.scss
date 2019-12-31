@@ -79,3 +79,20 @@ textarea { height: auto; }
   font-size: 1.5rem;
   color: rgba(6, 6, 6, 0.79);
 }
+
+.teams-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 8px;
+  padding-top: 8px;
+  border: solid #c8d7f1;
+}
+
+.remove-player {
+  border: none;
+  color: grey;
+
+  &:hover {
+    color: rgb(162, 61, 61);
+  }
+}

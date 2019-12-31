@@ -1,2 +1,3 @@
 .container
-  = react_component("JeopardyGame", { id: @jeopardy_game.id, categories: @jeopardy_game.state[:categories] })
+  = react_component("JeopardyGame", { id: @jeopardy_game.id, categories: @jeopardy_game.state[:categories],
+    teams: @jeopardy_game.teams })

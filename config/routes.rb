@@ -31,6 +31,8 @@ Rails.application.routes.draw do
       post 'add_panel'
       post 'remove_panel'
       patch 'edit_panel'
+      post 'add_team'
+      post 'remove_team'
     end
   end
 

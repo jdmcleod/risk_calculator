@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_31_013902) do
+ActiveRecord::Schema.define(version: 2019_12_31_160547) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -82,6 +82,15 @@ ActiveRecord::Schema.define(version: 2019_12_31_013902) do
     t.string "ratio"
     t.integer "number"
     t.index ["calculator_id"], name: "index_rolls_on_calculator_id"
+  end
+
+  create_table "teams", force: :cascade do |t|
+    t.string "name"
+    t.integer "score"
+    t.bigint "jeopardy_game_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["jeopardy_game_id"], name: "index_teams_on_jeopardy_game_id"
   end
 
   create_table "users", force: :cascade do |t|

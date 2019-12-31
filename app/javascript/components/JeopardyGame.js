@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { confirmAlert } from 'react-confirm-alert'; // Import
-import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
+import { confirmAlert } from 'react-confirm-alert';
+import 'react-confirm-alert/src/react-confirm-alert.css';
+import Teams from './Teams'
 
 export default class JeopardyGame extends React.Component {
   static propTypes = {
@@ -14,6 +15,7 @@ export default class JeopardyGame extends React.Component {
     this.state = {
       id: this.props.id,
       categories: this.props.categories,
+      teams: this.props.teams,
       categoryName: '',
       categoryId: '',
       showPanelForm: false,
@@ -43,10 +45,11 @@ export default class JeopardyGame extends React.Component {
     fetch(`/jeopardy_games/${this.props.id}.json`, {
       headers: { 'Content-Type': 'application/json' },
       method: 'GET',
-    }).then(response => response.json()).then(categories => {
+    }).then(response => response.json()).then(data => {
       this.setState((prevState) => {
         return {
-          categories: categories,
+          categories: data.categories,
+          teams: data.teams,
           showPanelForm: false
         }
       })
@@ -55,6 +58,16 @@ export default class JeopardyGame extends React.Component {
 
   addCategory() {
     fetch(`/jeopardy_games/${this.props.id}/add_category.json`, {
+      headers: { 'Content-Type': 'application/json' },
+      method: 'POST',
+      body: JSON.stringify({
+       name: this.state.categoryName
+      })
+    })
+  }
+
+  addTeam() {
+    fetch(`/jeopardy_games/${this.props.id}/add_team.json`, {
       headers: { 'Content-Type': 'application/json' },
       method: 'POST',
       body: JSON.stringify({
@@ -76,6 +89,30 @@ export default class JeopardyGame extends React.Component {
               method: 'POST',
               body: JSON.stringify({
               category_id: categoryId
+              })
+            })
+          }
+        },
+        {
+          label: 'No',
+        }
+      ]
+    });
+  }
+
+  removeTeam(id) {
+    confirmAlert({
+      title: 'Delete',
+      message: 'Are you sure delete this team?',
+      buttons: [
+        {
+          label: 'Yes, delete it',
+          onClick: () => {
+            fetch(`/jeopardy_games/${this.props.id}/remove_team.json`, {
+              headers: { 'Content-Type': 'application/json' },
+              method: 'POST',
+              body: JSON.stringify({
+                team_id: id
               })
             })
           }
@@ -246,13 +283,17 @@ export default class JeopardyGame extends React.Component {
 
   render() {
     return (
-      <div className='flex justify-center p-2'>
-        {this.renderPanelForm()}
-        {this.renderCategories()}
-        {this.renderQuestion()}
-        <div className='flex-column'>
-          <input className='form-control' placeholder='name' type='text' onChange={this.categoryNameInputHandler.bind(this)}/>
-          <button className='btn btn-outline-info mt-2' onClick={() => this.addCategory()}>add category</button>
+      <div>
+        <Teams teams={this.state.teams} removeTeam={this.removeTeam.bind(this)}/>
+        <div className='flex justify-center p-2'>
+          {this.renderPanelForm()}
+          {this.renderCategories()}
+          {this.renderQuestion()}
+          <div className='flex-column'>
+            <input className='form-control' placeholder='name' type='text' onChange={this.categoryNameInputHandler.bind(this)}/>
+            <button className='btn btn-outline-info mt-2' onClick={() => this.addCategory()}>add category</button>
+            <button className='btn btn-outline-info mt-2' onClick={() => this.addTeam()}>add team</button>
+          </div>
         </div>
       </div>
     )
