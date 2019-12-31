@@ -27,6 +27,9 @@ Rails.application.routes.draw do
   resources :jeopardy_games do
     member do
       post 'add_category'
+      post 'remove_category'
+      post 'add_panel'
+      post 'remove_panel'
     end
   end
 
