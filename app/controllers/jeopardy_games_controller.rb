@@ -40,7 +40,7 @@ class JeopardyGamesController < ApplicationController
   def add_team
     @jeopardy_game = JeopardyGame.find(params[:id])
     name = params[:jeopardy_game][:name]
-    @jeopardy_game.teams.build(name: name)
+    @jeopardy_game.teams.build(name: name, score: 0)
 
     @jeopardy_game.save
 
@@ -69,13 +69,39 @@ class JeopardyGamesController < ApplicationController
     head :ok
   end
 
+  def add_score
+    @jeopardy_game = JeopardyGame.find(params[:id])
+    team = @jeopardy_game.teams.find(params[:team_id])
+    team.update(score: team.score += params[:ammount].to_i)
+    @jeopardy_game.categories.find(params[:category_id]).panels.find(params[:panel_id]).update(completed: true)
+    @jeopardy_game.save
+    pusher_update_game
+
+    head :ok
+  end
+
+  def reset_panels
+    @jeopardy_game = JeopardyGame.find(params[:id])
+    @jeopardy_game.categories.each do |category|
+      category.panels.each do |panel|
+        panel.update(completed: false)
+      end
+    end
+
+    @jeopardy_game.save
+
+    pusher_update_game
+
+    head :ok
+  end
+
   def add_panel
     @jeopardy_game = JeopardyGame.find(params[:id])
     @category = @jeopardy_game.categories.find(params[:category_id])
     ammount = params[:ammount]
     question = params[:question]
     answer = params[:answer]
-    @category.panels.create(ammount: ammount, question: question, answer: answer)
+    @category.panels.create(ammount: ammount, question: question, answer: answer, completed: false)
     @category.save
     @jeopardy_game.save
 

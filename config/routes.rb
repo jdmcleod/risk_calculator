@@ -33,6 +33,8 @@ Rails.application.routes.draw do
       patch 'edit_panel'
       post 'add_team'
       post 'remove_team'
+      post 'add_score'
+      post 'reset_panels'
     end
   end
 

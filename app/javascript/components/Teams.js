@@ -8,7 +8,7 @@ export default class Teams extends React.Component {
   }
 
   renderTeams() {
-    return this.props.teams.map(team => {
+    return this.props.teams.sort((a, b) => a.id - b.id).map(team => {
       return (
         <div key={team.name}>
           <button className='btn remove-player' onClick={() => this.props.removeTeam(team.id)}>{team.name}</button>

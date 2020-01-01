@@ -17,6 +17,17 @@ h1, h2, h3, h4, h5, p {
   flex-direction: column;
 }
 
+.score-button {
+  width: 30%;
+}
+
+.control-panel {
+  border: solid rgb(149, 149, 210);
+  border-width: 1px;
+  height: 220px;
+  padding: 5px;
+}
+
 .panel-form-container {
   position: fixed;
   width: 100%;
@@ -40,7 +51,9 @@ h1, h2, h3, h4, h5, p {
   overflow: scroll;
   padding: 25px;
   border-radius: 20px;
-  background: #7da8d4;
+  background: #0003a2;
+  border: solid #e6e4ff;
+  border-width: 2px;
 }
 
 .question-panel {
@@ -63,7 +76,7 @@ h1, h2, h3, h4, h5, p {
 .panel-ammount-open {
   font-size: 2.5rem;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  color: rgba(30, 30, 30, 0.79);
+  color: rgb(255, 193, 7);
   margin-right: auto;
 }
 
@@ -75,12 +88,21 @@ h1, h2, h3, h4, h5, p {
   display: flex;
   justify-content: center;
   font-size: 2rem;
-  color: rgba(6, 6, 6, 0.79);
+  color: rgb(255, 193, 7);
 }
 
 .answer {
   font-size: 1.5rem;
-  color: rgba(6, 6, 6, 0.79);
+  color: rgb(255, 193, 7);
+}
+
+.yellow {
+  color: rgb(255, 193, 7);
+}
+
+.show-control-panel {
+  margin-left: auto;
+  margin-top: 10px;
 }
 
 .teams-container {

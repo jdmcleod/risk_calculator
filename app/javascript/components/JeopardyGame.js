@@ -25,7 +25,8 @@ export default class JeopardyGame extends React.Component {
       panelQuestion: '',
       panelAnswer: '',
       selectedPanel: '',
-      editPanel: false
+      editPanel: false,
+      showControlPanel: false
     }
   }
 
@@ -124,6 +125,27 @@ export default class JeopardyGame extends React.Component {
     });
   }
 
+  resetPanels() {
+    confirmAlert({
+      title: 'Reset',
+      message: 'The panels will all be marked as uncompleted',
+      buttons: [
+        {
+          label: 'Yes',
+          onClick: () => {
+            fetch(`/jeopardy_games/${this.props.id}/reset_panels.json`, {
+              headers: { 'Content-Type': 'application/json' },
+              method: 'POST',
+            })
+          }
+        },
+        {
+          label: 'No',
+        }
+      ]
+    });
+  }
+
   addPanel() {
     fetch(`/jeopardy_games/${this.props.id}/add_panel.json`, {
       headers: { 'Content-Type': 'application/json' },
@@ -166,6 +188,24 @@ export default class JeopardyGame extends React.Component {
     })
   }
 
+  handleScore(teamId, sign) {
+    let ammount = 0
+    if (sign === 'positive') ammount = this.state.selectedPanel.ammount
+    if (sign === 'negative') ammount = (this.state.selectedPanel.ammount * -1)
+    fetch(`/jeopardy_games/${this.props.id}/add_score.json`, {
+      headers: { 'Content-Type': 'application/json' },
+      method: 'POST',
+      body: JSON.stringify({
+        team_id: teamId,
+        category_id: this.state.selectedPanel.category_id,
+        panel_id: this.state.selectedPanel.id,
+        ammount: ammount
+      })
+    })
+
+    this.setState({ showQuestion: false, showAnswer: false })
+  }
+
   showPanelForm(categoryId, edit) {
     this.setState({ showPanelForm: true, showQuestion: false, categoryId: categoryId, editPanel: edit })
   }
@@ -187,15 +227,15 @@ export default class JeopardyGame extends React.Component {
       return (
         <div className='panel-form-container'>
           <div className='panel-form-inner'>
-            <h5 className='mt-2'>Ammount</h5>
+            <h5 className='mt-2 yellow'>Ammount</h5>
             <input defaultValue={this.state.selectedPanel.ammount} className='form-control panel-ammount' type='text' onChange={this.panelAmmountHandler.bind(this)} />
-            <h5 className='mt-2'>Question</h5>
+            <h5 className='mt-2 yellow'>Question</h5>
             <textarea defaultValue={this.state.selectedPanel.question} rows="5" className='form-control panel-question' type='text' onChange={this.panelQuestionHandler.bind(this)} />
-            <h5 className='mt-2'>Answer</h5>
+            <h5 className='mt-2 yellow'>Answer</h5>
             <textarea defaultValue={this.state.selectedPanel.answer} rows="3" className='form-control panel-answer' type='text' onChange={this.panelAnswerHandler.bind(this)} />
             <div className='justify-center'>
               {this.renderSaveButton()}
-              <button className='btn btn-outline-primary mt-3 ml-3' onClick={() => this.removePanel()}>delete</button>
+              <button className='btn btn-outline-warning mt-3 ml-3' onClick={() => this.removePanel()}>delete</button>
             </div>
           </div>
         </div>
@@ -205,9 +245,9 @@ export default class JeopardyGame extends React.Component {
 
   renderSaveButton() {
     if (this.state.editPanel) {
-      return <button className='btn btn-outline-primary mt-3' onClick={() => this.editPanel()}>save</button>
+      return <button className='btn btn-outline-warning mt-3' onClick={() => this.editPanel()}>save</button>
     } else {
-      return <button className='btn btn-outline-primary mt-3' onClick={() => this.addPanel()}>save</button>
+      return <button className='btn btn-outline-warning mt-3' onClick={() => this.addPanel()}>save</button>
     }
   }
 
@@ -217,11 +257,21 @@ export default class JeopardyGame extends React.Component {
         <div key={category.name} className='card category'>
           <h5 className='text-align-center mt-2'>{category.name}</h5>
           {this.renderPanels(category)}
-          <button className='btn btn-outline-secondary m-1' onClick={() => this.showPanelForm(category.id, false)}>add question</button>
-          <button className='btn btn-outline-danger m-1' onClick={() => this.removeCategory(category.id)}>remove</button>
+          {this.renderPanelControls()}
         </div>
       )
     })
+  }
+
+  renderPanelControls() {
+    if (this.state.showControlPanel) {
+      return (
+        <div className='m-1'>
+          <button className='btn btn-outline-secondary' onClick={() => this.showPanelForm(category.id, false)}>add question</button>
+          <button className='btn btn-outline-danger mt-1 w-100' onClick={() => this.removeCategory(category.id)}>remove</button>
+        </div>
+      )
+    }
   }
 
   renderQuestion() {
@@ -231,11 +281,11 @@ export default class JeopardyGame extends React.Component {
           <div className='panel-form-inner'>
             <div className='justify-center'>
               <div className="panel-ammount-open">{this.state.selectedPanel.ammount}</div>
-              <button className='btn btn-outline-primary m-1 close-panel' onClick={() => this.hideQuestion()}>Close</button>
-              <button className='btn btn-outline-primary m-1 close-panel' onClick={() => this.showPanelForm(this.state.selectedPanel.category_id, true)}>Edit</button>
+              <button className='btn btn-outline-warning m-1 close-panel' onClick={() => this.showPanelForm(this.state.selectedPanel.category_id, true)}>Edit</button>
+              <button className='btn btn-outline-warning m-1 close-panel' onClick={() => this.hideQuestion()}>Close</button>
             </div>
             <div className='question mt-3'>{this.state.selectedPanel.question}</div>
-            <button className='btn btn-outline-primary mt-5' onClick={() => this.showAnswer(this.state.selectedPanel)}>View Answer</button>
+            <button className='btn btn-outline-warning mt-5' onClick={() => this.showAnswer(this.state.selectedPanel)}>View Answer</button>
             {this.renderAnswer()}
           </div>
         </div>
@@ -247,10 +297,22 @@ export default class JeopardyGame extends React.Component {
     if (this.state.showAnswer) {
       return (
         <div className='answer mt-3'>
-          {this.state.selectedPanel.answer}
+          <div className='mb-3'>{this.state.selectedPanel.answer}</div>
+          {this.renderScoreButtons()}
         </div>
       )
     }
+  }
+
+  renderScoreButtons() {
+    return this.state.teams.map(team => {
+      return (
+        <div key={team.id} className='flex'>
+          <button className='btn btn-outline-success m-2 score-button' onClick={() => this.handleScore(team.id, 'positive')}>{team.name} guessed right</button>
+          <button className='btn btn-outline-danger m-2 score-button' onClick={() => this.handleScore(team.id, 'negative')}>{team.name} guessed wrong</button>
+        </div>
+      )
+    })
   }
 
   renderPanels(category) {
@@ -258,10 +320,30 @@ export default class JeopardyGame extends React.Component {
       return category.panels.sort((a, b) => a.ammount - b.ammount).map(panel => {
         return (
           <div key={panel.id} className='card question-panel' onClick={() => this.showQuestion(panel)}>
-            <h5 className='text-align-center mt-1 panel-ammount'>{panel.ammount}</h5>
+            {this.renderPanel(panel)}
           </div>
         )
       })
+    }
+  }
+
+  renderPanel(panel) {
+    if (!panel.completed === true) {
+      return <h5 className='text-align-center mt-1 panel-ammount'>{panel.ammount}</h5>
+    }
+  }
+
+  renderControlPanel() {
+    if (this.state.showControlPanel) {
+      return (
+        <div className='flex-column control-panel'>
+          <h5 className='text-align-center'>Control Panel</h5>
+          <input className='form-control' placeholder='name' type='text' onChange={this.categoryNameInputHandler.bind(this)} />
+          <button className='btn btn-outline-info mt-2' onClick={() => this.addCategory()}>add category</button>
+          <button className='btn btn-outline-info mt-2' onClick={() => this.addTeam()}>add team</button>
+          <button className='btn btn-outline-warning mt-2' onClick={() => this.resetPanels()}>reset panels</button>
+        </div>
+      )
     }
   }
 
@@ -281,19 +363,27 @@ export default class JeopardyGame extends React.Component {
     this.setState({ panelAnswer: event.target.value });
   }
 
+  toggleShowControlPanel() {
+    if (this.state.showControlPanel === false) {
+      this.setState({showControlPanel: true})
+    } else {
+      this.setState({showControlPanel: false})
+    }
+  }
+
   render() {
     return (
       <div>
+        <div className='justify-center'>
+          <h1 className='mt-3'>Bible Study Trivia</h1>
+          <button className='btn btn-outline-secondary show-control-panel' onClick={() => this.toggleShowControlPanel()}>Edit</button>
+        </div>
         <Teams teams={this.state.teams} removeTeam={this.removeTeam.bind(this)}/>
         <div className='flex justify-center p-2'>
           {this.renderPanelForm()}
           {this.renderCategories()}
           {this.renderQuestion()}
-          <div className='flex-column'>
-            <input className='form-control' placeholder='name' type='text' onChange={this.categoryNameInputHandler.bind(this)}/>
-            <button className='btn btn-outline-info mt-2' onClick={() => this.addCategory()}>add category</button>
-            <button className='btn btn-outline-info mt-2' onClick={() => this.addTeam()}>add team</button>
-          </div>
+          {this.renderControlPanel()}
         </div>
       </div>
     )
