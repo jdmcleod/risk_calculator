@@ -206,6 +206,19 @@ export default class JeopardyGame extends React.Component {
     this.setState({ showQuestion: false, showAnswer: false })
   }
 
+  handleNoAnswer() {
+    fetch(`/jeopardy_games/${this.props.id}/no_answer.json`, {
+      headers: { 'Content-Type': 'application/json' },
+      method: 'POST',
+      body: JSON.stringify({
+        category_id: this.state.selectedPanel.category_id,
+        panel_id: this.state.selectedPanel.id
+      })
+    })
+
+    this.setState({ showQuestion: false, showAnswer: false })
+  }
+
   showPanelForm(categoryId, edit) {
     this.setState({ showPanelForm: true, showQuestion: false, categoryId: categoryId, editPanel: edit })
   }
@@ -299,6 +312,7 @@ export default class JeopardyGame extends React.Component {
         <div className='answer mt-3'>
           <div className='mb-3'>{this.state.selectedPanel.answer}</div>
           {this.renderScoreButtons()}
+          <button className='btn btn-outline-secondary m-2 score-button' onClick={() => this.handleNoAnswer()}>no guesses</button>
         </div>
       )
     }

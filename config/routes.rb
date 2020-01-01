@@ -35,6 +35,7 @@ Rails.application.routes.draw do
       post 'remove_team'
       post 'add_score'
       post 'reset_panels'
+      post 'no_answer'
     end
   end
 

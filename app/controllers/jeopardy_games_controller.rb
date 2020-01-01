@@ -80,6 +80,15 @@ class JeopardyGamesController < ApplicationController
     head :ok
   end
 
+  def no_answer
+    @jeopardy_game = JeopardyGame.find(params[:id])
+    @jeopardy_game.categories.find(params[:category_id]).panels.find(params[:panel_id]).update(completed: true)
+    @jeopardy_game.save
+    pusher_update_game
+
+    head :ok
+  end
+
   def reset_panels
     @jeopardy_game = JeopardyGame.find(params[:id])
     @jeopardy_game.categories.each do |category|
