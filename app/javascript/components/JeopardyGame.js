@@ -270,17 +270,17 @@ export default class JeopardyGame extends React.Component {
         <div key={category.name} className='card category'>
           <h5 className='text-align-center mt-2'>{category.name}</h5>
           {this.renderPanels(category)}
-          {this.renderPanelControls()}
+          {this.renderPanelControls(category)}
         </div>
       )
     })
   }
 
-  renderPanelControls() {
+  renderPanelControls(category) {
     if (this.state.showControlPanel) {
       return (
         <div className='m-1'>
-          <button className='btn btn-outline-secondary' onClick={() => this.showPanelForm(category.id, false)}>add question</button>
+          <button className='btn btn-outline-secondary w-100' onClick={() => this.showPanelForm(category.id, false)}>+</button>
           <button className='btn btn-outline-danger mt-1 w-100' onClick={() => this.removeCategory(category.id)}>remove</button>
         </div>
       )
