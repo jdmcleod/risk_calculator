@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     if @user.save
       flash[:success] = "Successfully logged in"
       log_in @user
-      redirect_to calculators_path
+      redirect_to jeopardy_games_path
     else
       render 'new'
     end

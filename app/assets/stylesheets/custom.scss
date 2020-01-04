@@ -192,7 +192,7 @@ p.roll-message {
   justify-content: space-around;
   background: #efefef;
   border-radius: 6px;
-  padding: 15px;
+  padding: 15px 15px 0 15px;
   margin: 5px;
   min-height: 5rem;
 }
@@ -202,6 +202,7 @@ p.roll-message {
   display: flex;
   flex-direction: column;
   padding: 10px;
+  margin-bottom: 15px;
 }
 
 .game-title {

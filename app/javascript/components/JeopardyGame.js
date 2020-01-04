@@ -231,6 +231,15 @@ export default class JeopardyGame extends React.Component {
     if (!this.state.isPublic) this.setState({ isPublic: true })
   }
 
+  saveGame() {
+    fetch(`/jeopardy_games/${this.props.id}/save_game.json`, {
+      headers: { 'Content-Type': 'application/json' },
+      method: 'POST',
+    })
+
+    window.location = '/jeopardy_games'
+  }
+
   showPanelForm(categoryId, edit) {
     this.setState({ showPanelForm: true, showQuestion: false, categoryId: categoryId, editPanel: edit })
   }
@@ -321,6 +330,8 @@ export default class JeopardyGame extends React.Component {
   renderEditButton() {
     if (this.state.isOwner) {
       return <button className='btn btn-outline-secondary show-control-panel' onClick={() => this.toggleEditMode()}>Edit</button>
+    } else {
+      return <button className='btn btn-outline-secondary show-control-panel' onClick={() => this.saveGame()}>Save to my games</button>
     }
   }
 

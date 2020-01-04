@@ -27,6 +27,25 @@ class JeopardyGamesController < ApplicationController
     end
   end
 
+  def save_game
+    existing_game = JeopardyGame.find(params[:id])
+
+    @new_game = JeopardyGame.new(name: "#{existing_game.name} copy", user: current_user)
+    @new_game.save
+    existing_game.categories.each do |category|
+      @new_game.categories.create(name: category.name)
+      category.panels.each do |p|
+        @new_game.categories.find_by(name: category.name).panels.create(ammount: p.ammount, question: p.question, answer: p.answer, completed: false)
+      end
+    end
+
+    existing_game.teams.each do |team|
+      @new_game.teams.create(name: team.name, score: team.score)
+    end
+
+    @new_game.save
+  end
+
   def add_category
     @jeopardy_game = JeopardyGame.find(params[:id])
     name = params[:jeopardy_game][:name]

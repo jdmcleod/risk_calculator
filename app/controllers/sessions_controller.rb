@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
   skip_before_action :logged_in_user, only: [:new, :create]
 
   def new
-    redirect_to calculators_url if logged_in?
+    redirect_to jeopardy_games_url if logged_in?
   end
 
   def create
@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       flash[:success] = "Succesfully logged in! Hi #{user.name}!"
       log_in user
-      redirect_to calculators_path
+      redirect_to jeopardy_games_path
     else
       flash.now[:danger] = 'Invalid username/password combination'
       render 'new'

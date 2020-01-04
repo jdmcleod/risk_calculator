@@ -37,6 +37,7 @@ Rails.application.routes.draw do
       post 'reset_panels'
       post 'no_answer'
       post 'toggle_scope'
+      post 'save_game'
     end
   end
 
