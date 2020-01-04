@@ -4,6 +4,7 @@ class JeopardyGamesController < ApplicationController
 
   def index
     @jeopardy_game = self
+    @all_games = JeopardyGame.public_games
   end
 
   def show
@@ -16,6 +17,7 @@ class JeopardyGamesController < ApplicationController
 
   def create
     @jeopardy_game = JeopardyGame.new(name: params[:jeopardy_game][:name], user: current_user)
+    @all_games = JeopardyGame.public_games
     if @jeopardy_game.save
       flash[:success] = "Game created"
       render :index
@@ -104,6 +106,22 @@ class JeopardyGamesController < ApplicationController
     head :ok
   end
 
+  def toggle_scope
+    @jeopardy_game = JeopardyGame.find(params[:id])
+
+    if @jeopardy_game.public == false
+      @jeopardy_game.update(public: true)
+    else
+      @jeopardy_game.update(public: false)
+    end
+
+    @jeopardy_game.save
+
+    pusher_update_game
+
+    head :ok
+  end
+
   def add_panel
     @jeopardy_game = JeopardyGame.find(params[:id])
     @category = @jeopardy_game.categories.find(params[:category_id])
@@ -157,6 +175,8 @@ class JeopardyGamesController < ApplicationController
 
   def show
     @jeopardy_game = JeopardyGame.find(params[:id])
+    @is_owner = (@jeopardy_game.user == current_user)
+    @is_public = @jeopardy_game.public
 
     respond_to do |format|
       format.html do

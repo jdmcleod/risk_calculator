@@ -36,6 +36,7 @@ Rails.application.routes.draw do
       post 'add_score'
       post 'reset_panels'
       post 'no_answer'
+      post 'toggle_scope'
     end
   end
 

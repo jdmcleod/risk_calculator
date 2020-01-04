@@ -4,6 +4,8 @@ class JeopardyGame < ApplicationRecord
   has_many :teams
   belongs_to :user
 
+  scope :public_games, -> { where(public: true) }
+
   def state
     {
       categories: categories.map(&:state)

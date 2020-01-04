@@ -24,8 +24,12 @@ h1, h2, h3, h4, h5, p {
 .control-panel {
   border: solid rgb(149, 149, 210);
   border-width: 1px;
-  height: 220px;
   padding: 5px;
+  max-width: 200px;
+}
+
+.control-panel > * {
+  width: 100%
 }
 
 .panel-form-container {

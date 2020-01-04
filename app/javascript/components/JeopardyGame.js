@@ -13,7 +13,9 @@ export default class JeopardyGame extends React.Component {
 
     this.state = {
       id: this.props.id,
-      game_name: this.props.game_name,
+      isOwner: this.props.isOwner,
+      isPublic: this.props.isPublic,
+      gameName: this.props.gameName,
       categories: this.props.categories,
       teams: this.props.teams,
       categoryName: '',
@@ -219,6 +221,16 @@ export default class JeopardyGame extends React.Component {
     this.setState({ showQuestion: false, showAnswer: false })
   }
 
+  toggleScope() {
+    fetch(`/jeopardy_games/${this.props.id}/toggle_scope.json`, {
+      headers: { 'Content-Type': 'application/json' },
+      method: 'POST',
+    })
+
+    if (this.state.isPublic) this.setState({ isPublic: false })
+    if (!this.state.isPublic) this.setState({ isPublic: true })
+  }
+
   showPanelForm(categoryId, edit) {
     this.setState({ showPanelForm: true, showQuestion: false, categoryId: categoryId, editPanel: edit })
   }
@@ -306,6 +318,12 @@ export default class JeopardyGame extends React.Component {
     }
   }
 
+  renderEditButton() {
+    if (this.state.isOwner) {
+      return <button className='btn btn-outline-secondary show-control-panel' onClick={() => this.toggleEditMode()}>Edit</button>
+    }
+  }
+
   renderAnswer() {
     if (this.state.showAnswer) {
       return (
@@ -350,14 +368,25 @@ export default class JeopardyGame extends React.Component {
   renderControlPanel() {
     if (this.state.editMode) {
       return (
-        <div className='flex-column control-panel'>
-          <h5 className='text-align-center'>Control Panel</h5>
-          <input className='form-control' placeholder='name' type='text' onChange={this.categoryNameInputHandler.bind(this)} />
-          <button className='btn btn-outline-info mt-2' onClick={() => this.addCategory()}>add category</button>
-          <button className='btn btn-outline-info mt-2' onClick={() => this.addTeam()}>add team</button>
-          <button className='btn btn-outline-warning mt-2' onClick={() => this.resetPanels()}>reset panels</button>
+        <div className='flex-column'>
+          <div className='control-panel'>
+            <h5 className='text-align-center'>Control Panel</h5>
+            <input className='form-control' placeholder='name' type='text' onChange={this.categoryNameInputHandler.bind(this)} />
+            <button className='btn btn-outline-info mt-2' onClick={() => this.addCategory()}>add category</button>
+            <button className='btn btn-outline-info mt-2' onClick={() => this.addTeam()}>add team</button>
+            <button className='btn btn-outline-warning mt-2' onClick={() => this.resetPanels()}>reset panels</button>
+            {this.renderToggleScopeButton()}
+          </div>
         </div>
       )
+    }
+  }
+
+  renderToggleScopeButton() {
+    if (this.state.isPublic) {
+      return <button className='btn btn-outline-secondary mt-2' onClick={() => this.toggleScope()}>make private</button>
+    } else {
+      return <button className='btn btn-outline-secondary mt-2' onClick={() => this.toggleScope()}>make public</button>
     }
   }
 
@@ -377,7 +406,7 @@ export default class JeopardyGame extends React.Component {
     this.setState({ panelAnswer: event.target.value });
   }
 
-  toggleeditMode() {
+  toggleEditMode() {
     if (this.state.editMode === false) {
       this.setState({editMode: true})
     } else {
@@ -389,8 +418,8 @@ export default class JeopardyGame extends React.Component {
     return (
       <div>
         <div className='justify-center'>
-          <h1 className='mt-3'>{this.state.game_name}</h1>
-          <button className='btn btn-outline-secondary show-control-panel' onClick={() => this.toggleeditMode()}>Edit</button>
+          <h1 className='mt-3'>{this.state.gameName}</h1>
+          {this.renderEditButton()}
         </div>
         <Teams teams={this.state.teams} removeTeam={this.removeTeam.bind(this)} editMode={this.state.editMode} handleScore={this.handleScore.bind(this)}/>
         <div className='flex justify-center p-2'>
