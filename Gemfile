@@ -20,6 +20,7 @@ gem 'chartkick'
 gem 'random_name_generator'
 gem 'pg'
 gem 'pusher'
+gem 'yaml_db'
 
 
 group :development, :test do

@@ -1,0 +1,2673 @@
+
+---
+ar_internal_metadata:
+  columns:
+  - key
+  - value
+  - created_at
+  - updated_at
+  records: 
+  - - environment
+    - development
+    - 2019-12-10 03:39:04.549379000 Z
+    - 2019-12-10 03:39:04.549379000 Z
+
+---
+calculators:
+  columns:
+  - id
+  - created_at
+  - updated_at
+  - user_id
+  - name
+  - streak_holder
+  records: 
+  - - 18
+    - 2019-12-18 04:58:02.913504000 Z
+    - 2019-12-30 23:01:48.507370000 Z
+    - 1
+    - Game
+    - Ben
+
+---
+categories:
+  columns:
+  - id
+  - name
+  - jeopardy_game_id
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - category
+    - 1
+    - 2019-12-31 01:53:30.553348000 Z
+    - 2019-12-31 01:53:30.553348000 Z
+  - - 2
+    - category
+    - 1
+    - 2019-12-31 01:56:33.789228000 Z
+    - 2019-12-31 01:56:33.789228000 Z
+  - - 3
+    - category
+    - 1
+    - 2019-12-31 02:12:43.996217000 Z
+    - 2019-12-31 02:12:43.996217000 Z
+  - - 4
+    - category
+    - 1
+    - 2019-12-31 02:15:21.533498000 Z
+    - 2019-12-31 02:15:21.533498000 Z
+  - - 5
+    - category
+    - 1
+    - 2019-12-31 02:15:50.096692000 Z
+    - 2019-12-31 02:15:50.096692000 Z
+  - - 6
+    - category
+    - 1
+    - 2019-12-31 02:20:19.524579000 Z
+    - 2019-12-31 02:20:19.524579000 Z
+  - - 7
+    - category
+    - 1
+    - 2019-12-31 02:20:50.038443000 Z
+    - 2019-12-31 02:20:50.038443000 Z
+  - - 8
+    - category
+    - 1
+    - 2019-12-31 02:21:26.439748000 Z
+    - 2019-12-31 02:21:26.439748000 Z
+  - - 9
+    - category
+    - 1
+    - 2019-12-31 02:21:51.245084000 Z
+    - 2019-12-31 02:21:51.245084000 Z
+  - - 10
+    - category
+    - 1
+    - 2019-12-31 02:22:16.689834000 Z
+    - 2019-12-31 02:22:16.689834000 Z
+  - - 11
+    - category
+    - 3
+    - 2019-12-31 02:24:22.441379000 Z
+    - 2019-12-31 02:24:22.441379000 Z
+  - - 12
+    - category
+    - 3
+    - 2019-12-31 02:25:58.129699000 Z
+    - 2019-12-31 02:25:58.129699000 Z
+  - - 13
+    - category
+    - 3
+    - 2019-12-31 02:27:28.403161000 Z
+    - 2019-12-31 02:27:28.403161000 Z
+  - - 14
+    - category
+    - 3
+    - 2019-12-31 02:27:38.039542000 Z
+    - 2019-12-31 02:27:38.039542000 Z
+  - - 15
+    - category
+    - 3
+    - 2019-12-31 02:30:30.016926000 Z
+    - 2019-12-31 02:30:30.016926000 Z
+  - - 16
+    - category
+    - 3
+    - 2019-12-31 02:30:51.225717000 Z
+    - 2019-12-31 02:30:51.225717000 Z
+  - - 17
+    - category
+    - 3
+    - 2019-12-31 02:31:32.608225000 Z
+    - 2019-12-31 02:31:32.608225000 Z
+  - - 18
+    - category
+    - 3
+    - 2019-12-31 02:31:59.060976000 Z
+    - 2019-12-31 02:31:59.060976000 Z
+  - - 19
+    - category
+    - 3
+    - 2019-12-31 02:33:09.572386000 Z
+    - 2019-12-31 02:33:09.572386000 Z
+  - - 23
+    - hi
+    - 4
+    - 2019-12-31 02:45:22.466133000 Z
+    - 2019-12-31 02:45:22.466133000 Z
+  - - 24
+    - Bye
+    - 4
+    - 2019-12-31 02:45:28.261181000 Z
+    - 2019-12-31 02:45:28.261181000 Z
+  - - 32
+    - dasf
+    - 5
+    - 2019-12-31 05:10:51.576058000 Z
+    - 2019-12-31 05:10:51.576058000 Z
+  - - 35
+    - Romans
+    - 5
+    - 2019-12-31 05:27:34.898463000 Z
+    - 2019-12-31 05:27:34.898463000 Z
+  - - 46
+    - Hebrews
+    - 5
+    - 2019-12-31 15:15:05.203743000 Z
+    - 2019-12-31 15:15:05.203743000 Z
+  - - 47
+    - James
+    - 5
+    - 2019-12-31 15:15:10.470337000 Z
+    - 2019-12-31 15:15:10.470337000 Z
+  - - 49
+    - 1 Corinthians
+    - 18
+    - 2019-12-31 15:32:14.798485000 Z
+    - 2020-01-04 20:25:28.662389000 Z
+  - - 50
+    - 2 Corinthians
+    - 18
+    - 2019-12-31 15:32:19.797185000 Z
+    - 2020-01-04 20:25:28.669680000 Z
+  - - 51
+    - Hebrews
+    - 18
+    - 2019-12-31 15:32:24.084302000 Z
+    - 2020-01-04 20:25:28.677968000 Z
+  - - 52
+    - Zephaniah
+    - 18
+    - 2019-12-31 15:32:28.295300000 Z
+    - 2020-01-04 20:25:28.683926000 Z
+  - - 53
+    - James
+    - 18
+    - 2019-12-31 15:32:31.963107000 Z
+    - 2020-01-04 20:25:28.687403000 Z
+  - - 60
+    - Category 1
+    - 19
+    - 2019-12-31 21:45:47.971811000 Z
+    - 2020-01-04 20:26:58.476971000 Z
+  - - 62
+    - John
+    - 18
+    - 2020-01-01 14:39:37.767042000 Z
+    - 2020-01-04 20:25:28.695390000 Z
+  - - 63
+    - John Pt II
+    - 18
+    - 2020-01-01 18:03:21.383977000 Z
+    - 2020-01-04 20:25:28.699644000 Z
+  - - 64
+    - New cat
+    - 19
+    - 2020-01-04 18:50:52.945030000 Z
+    - 2020-01-04 20:26:58.481680000 Z
+  - - 65
+    - asdfads
+    - 14
+    - 2020-01-04 20:18:21.669758000 Z
+    - 2020-01-04 20:18:21.669758000 Z
+  - - 66
+    - cat
+    - 8
+    - 2020-01-04 20:34:25.081497000 Z
+    - 2020-01-04 20:34:25.081497000 Z
+  - - 67
+    - cat
+    - 21
+    - 2020-01-04 20:41:27.740007000 Z
+    - 2020-01-04 20:41:27.740007000 Z
+  - - 68
+    - cat
+    - 22
+    - 2020-01-04 20:41:51.543997000 Z
+    - 2020-01-04 20:41:51.543997000 Z
+  - - 69
+    - cat
+    - 23
+    - 2020-01-04 20:42:39.912694000 Z
+    - 2020-01-04 20:42:39.912694000 Z
+  - - 70
+    - cat
+    - 24
+    - 2020-01-04 20:44:12.760942000 Z
+    - 2020-01-04 20:44:12.760942000 Z
+  - - 72
+    - da
+    - 25
+    - 2020-01-04 20:46:04.329665000 Z
+    - 2020-01-04 20:46:04.329665000 Z
+  - - 73
+    - 1 Corinthians
+    - 26
+    - 2020-01-04 20:47:03.546637000 Z
+    - 2020-01-04 20:47:03.546637000 Z
+  - - 74
+    - 2 Corinthians
+    - 26
+    - 2020-01-04 20:47:03.631997000 Z
+    - 2020-01-04 20:47:03.631997000 Z
+  - - 75
+    - Hebrews
+    - 26
+    - 2020-01-04 20:47:03.695545000 Z
+    - 2020-01-04 20:47:03.695545000 Z
+  - - 76
+    - Zephaniah
+    - 26
+    - 2020-01-04 20:47:03.897902000 Z
+    - 2020-01-04 20:47:03.897902000 Z
+  - - 77
+    - James
+    - 26
+    - 2020-01-04 20:47:03.966821000 Z
+    - 2020-01-04 20:47:03.966821000 Z
+  - - 78
+    - John
+    - 26
+    - 2020-01-04 20:47:04.037738000 Z
+    - 2020-01-04 20:47:04.037738000 Z
+  - - 79
+    - John Pt II
+    - 26
+    - 2020-01-04 20:47:04.105115000 Z
+    - 2020-01-04 20:47:04.105115000 Z
+  - - 80
+    - 1 Corinthians
+    - 27
+    - 2020-01-04 20:49:06.619641000 Z
+    - 2020-01-04 20:49:06.619641000 Z
+  - - 81
+    - 2 Corinthians
+    - 27
+    - 2020-01-04 20:49:06.725089000 Z
+    - 2020-01-04 20:49:06.725089000 Z
+  - - 82
+    - Hebrews
+    - 27
+    - 2020-01-04 20:49:06.982405000 Z
+    - 2020-01-04 20:49:06.982405000 Z
+  - - 83
+    - Zephaniah
+    - 27
+    - 2020-01-04 20:49:07.065560000 Z
+    - 2020-01-04 20:49:07.065560000 Z
+  - - 84
+    - James
+    - 27
+    - 2020-01-04 20:49:07.155330000 Z
+    - 2020-01-04 20:49:07.155330000 Z
+  - - 85
+    - John
+    - 27
+    - 2020-01-04 20:49:07.232116000 Z
+    - 2020-01-04 20:49:07.232116000 Z
+  - - 86
+    - John Pt II
+    - 27
+    - 2020-01-04 20:49:07.330956000 Z
+    - 2020-01-04 20:49:07.330956000 Z
+  - - 87
+    - 1 Corinthians
+    - 28
+    - 2020-01-04 20:52:03.395249000 Z
+    - 2020-01-04 20:52:03.395249000 Z
+  - - 88
+    - 2 Corinthians
+    - 28
+    - 2020-01-04 20:52:03.497003000 Z
+    - 2020-01-04 20:52:03.497003000 Z
+  - - 89
+    - Hebrews
+    - 28
+    - 2020-01-04 20:52:03.724319000 Z
+    - 2020-01-04 20:52:03.724319000 Z
+  - - 90
+    - Zephaniah
+    - 28
+    - 2020-01-04 20:52:03.803988000 Z
+    - 2020-01-04 20:52:03.803988000 Z
+  - - 91
+    - James
+    - 28
+    - 2020-01-04 20:52:03.882838000 Z
+    - 2020-01-04 20:52:03.882838000 Z
+  - - 92
+    - John
+    - 28
+    - 2020-01-04 20:52:03.960646000 Z
+    - 2020-01-04 20:52:03.960646000 Z
+  - - 93
+    - John Pt II
+    - 28
+    - 2020-01-04 20:52:04.211270000 Z
+    - 2020-01-04 20:52:04.211270000 Z
+  - - 94
+    - 1 Corinthians
+    - 29
+    - 2020-01-04 20:58:15.054992000 Z
+    - 2020-01-04 20:58:15.054992000 Z
+  - - 95
+    - 2 Corinthians
+    - 29
+    - 2020-01-04 20:58:15.148659000 Z
+    - 2020-01-04 20:58:15.148659000 Z
+  - - 96
+    - Hebrews
+    - 29
+    - 2020-01-04 20:58:15.352063000 Z
+    - 2020-01-04 20:58:15.352063000 Z
+  - - 97
+    - Zephaniah
+    - 29
+    - 2020-01-04 20:58:15.596098000 Z
+    - 2020-01-04 20:58:15.596098000 Z
+  - - 98
+    - James
+    - 29
+    - 2020-01-04 20:58:15.819738000 Z
+    - 2020-01-04 20:58:15.819738000 Z
+  - - 99
+    - John
+    - 29
+    - 2020-01-04 20:58:15.901330000 Z
+    - 2020-01-04 20:58:15.901330000 Z
+  - - 100
+    - John Pt II
+    - 29
+    - 2020-01-04 20:58:15.970341000 Z
+    - 2020-01-04 20:58:15.970341000 Z
+
+---
+jeopardy_games:
+  columns:
+  - id
+  - created_at
+  - updated_at
+  - name
+  - user_id
+  - public
+  records: 
+  - - 18
+    - 2020-01-04 20:25:28.640953000 Z
+    - 2020-01-04 20:57:26.030178000 Z
+    - Bible Study
+    - 2
+    - true
+  - - 29
+    - 2020-01-04 20:58:15.033075000 Z
+    - 2020-01-04 20:58:29.363513000 Z
+    - Bible Study
+    - 1
+    - false
+
+---
+panels:
+  columns:
+  - id
+  - ammount
+  - question
+  - answer
+  - category_id
+  - created_at
+  - updated_at
+  - completed
+  records: 
+  - - 1
+    - 300
+    - question
+    - anwer
+    - 26
+    - 2019-12-31 04:11:33.694686000 Z
+    - 2019-12-31 04:11:33.694686000 Z
+    - false
+  - - 2
+    - 200
+    - dafs
+    - adsf
+    - 26
+    - 2019-12-31 04:12:05.972288000 Z
+    - 2019-12-31 04:12:05.972288000 Z
+    - false
+  - - 3
+    - 200
+    - dfa
+    - asdf
+    - 26
+    - 2019-12-31 04:15:46.878589000 Z
+    - 2019-12-31 04:15:46.878589000 Z
+    - false
+  - - 4
+    - 200
+    - dasf
+    - asdf
+    - 26
+    - 2019-12-31 04:16:24.844572000 Z
+    - 2019-12-31 04:16:24.844572000 Z
+    - false
+  - - 5
+    - 200
+    - asdl;fja
+    - asdf;lk
+    - 26
+    - 2019-12-31 04:19:54.099064000 Z
+    - 2019-12-31 04:19:54.099064000 Z
+    - false
+  - - 6
+    - 0
+    - sadf
+    - asdf
+    - 26
+    - 2019-12-31 04:20:13.633275000 Z
+    - 2019-12-31 04:20:13.633275000 Z
+    - false
+  - - 7
+    - 200
+    - sdalkf
+    - sldkfj
+    - 27
+    - 2019-12-31 04:23:02.987364000 Z
+    - 2019-12-31 04:23:02.987364000 Z
+    - false
+  - - 8
+    - 0
+    - asdf
+    - asdf
+    - 27
+    - 2019-12-31 04:23:24.694432000 Z
+    - 2019-12-31 04:23:24.694432000 Z
+    - false
+  - - 9
+    - 0
+    - sadf
+    - asdf
+    - 27
+    - 2019-12-31 04:23:50.201275000 Z
+    - 2019-12-31 04:23:50.201275000 Z
+    - false
+  - - 10
+    - 0
+    - asdf
+    - asdf
+    - 28
+    - 2019-12-31 04:26:29.881456000 Z
+    - 2019-12-31 04:26:29.881456000 Z
+    - false
+  - - 11
+    - 0
+    - asdf
+    - asdf
+    - 28
+    - 2019-12-31 04:28:56.865810000 Z
+    - 2019-12-31 04:28:56.865810000 Z
+    - false
+  - - 12
+    - 2
+    - df
+    - df
+    - 28
+    - 2019-12-31 04:30:47.122662000 Z
+    - 2019-12-31 04:30:47.122662000 Z
+    - false
+  - - 13
+    - 34
+    - asdf
+    - asdf
+    - 28
+    - 2019-12-31 04:30:54.504421000 Z
+    - 2019-12-31 04:30:54.504421000 Z
+    - false
+  - - 14
+    - 3
+    - d
+    - d
+    - 28
+    - 2019-12-31 04:46:48.195123000 Z
+    - 2019-12-31 04:46:48.195123000 Z
+    - false
+  - - 15
+    - 23
+    - sdf
+    - df
+    - 28
+    - 2019-12-31 05:04:16.813726000 Z
+    - 2019-12-31 05:04:16.813726000 Z
+    - false
+  - - 16
+    - 3
+    - d
+    - df
+    - 28
+    - 2019-12-31 05:05:00.740709000 Z
+    - 2019-12-31 05:05:00.740709000 Z
+    - false
+  - - 17
+    - 300
+    - dfadsf
+    - ''
+    - 33
+    - 2019-12-31 05:14:08.371838000 Z
+    - 2019-12-31 14:54:13.259028000 Z
+    - false
+  - - 18
+    - 300
+    - A question
+    - an answer
+    - 34
+    - 2019-12-31 05:17:22.160119000 Z
+    - 2019-12-31 05:17:22.160119000 Z
+    - false
+  - - 19
+    - 200
+    - why didn't this change?
+    - ''
+    - 32
+    - 2019-12-31 05:26:03.042890000 Z
+    - 2019-12-31 15:00:42.833487000 Z
+    - false
+  - - 20
+    - 200
+    - dafs are neet
+    - sadf
+    - 32
+    - 2019-12-31 05:26:45.515550000 Z
+    - 2019-12-31 15:00:32.563751000 Z
+    - false
+  - - 21
+    - 300
+    - ''
+    - ''
+    - 33
+    - 2019-12-31 05:27:23.188761000 Z
+    - 2019-12-31 14:57:17.438138000 Z
+    - false
+  - - 24
+    - 100
+    - a nice questoin
+    - ''
+    - 35
+    - 2019-12-31 05:28:15.498920000 Z
+    - 2019-12-31 15:05:58.102160000 Z
+    - false
+  - - 25
+    - 200
+    - 'so do i
+
+      '
+    - 'answer ansdwerer
+
+      '
+    - 35
+    - 2019-12-31 05:28:22.068012000 Z
+    - 2019-12-31 15:01:27.593080000 Z
+    - false
+  - - 26
+    - 300
+    - ''
+    - strange
+    - 35
+    - 2019-12-31 05:33:22.587813000 Z
+    - 2019-12-31 15:01:53.777226000 Z
+    - false
+  - - 27
+    - 600
+    - asdf
+    - asdf
+    - 35
+    - 2019-12-31 05:34:10.806263000 Z
+    - 2019-12-31 14:53:58.451776000 Z
+    - false
+  - - 35
+    - 200
+    - quesiton 2
+    - |-
+      answer
+      edited
+    - 36
+    - 2019-12-31 14:47:26.408050000 Z
+    - 2019-12-31 15:01:01.622816000 Z
+    - false
+  - - 36
+    - 100
+    - quesiton 2
+    - 'answer ansdwerer
+
+      '
+    - 37
+    - 2019-12-31 14:47:48.063273000 Z
+    - 2019-12-31 15:06:37.421691000 Z
+    - false
+  - - 38
+    - 200
+    - This is a very realisticly long quesion that asks some very intretguing stuff
+      about the bible and you should definitly answer it weell
+    - ''
+    - 37
+    - 2019-12-31 15:06:30.148316000 Z
+    - 2019-12-31 15:06:30.148316000 Z
+    - false
+  - - 39
+    - 300
+    - Question about John
+    - 'Yes'
+    - 43
+    - 2019-12-31 15:09:06.296011000 Z
+    - 2019-12-31 15:09:24.791414000 Z
+    - false
+  - - 40
+    - 200
+    - Another Questiona bout John This question is a lot longer and stuf this iAnother
+      Questiona bout John This question is a lot longer and stuf this i
+    - Another Questiona bout John This question is a lot longer and stuf this i
+    - 43
+    - 2019-12-31 15:09:18.579396000 Z
+    - 2019-12-31 17:59:47.536072000 Z
+    - false
+  - - 41
+    - 100
+    - This is a very long questoin that took  me a while to type outThis is a very
+      long questoin that took  me a while to type outThis is a very long questoin
+      that took  me a while to type out
+    - Answer
+    - 46
+    - 2019-12-31 15:16:18.720285000 Z
+    - 2019-12-31 15:22:16.553449000 Z
+    - false
+  - - 43
+    - 500
+    - A very cool question that talks about the Bible and stuff.
+    - The Anwser is right between your eyes!
+    - 47
+    - 2019-12-31 15:24:42.732325000 Z
+    - 2019-12-31 15:24:42.732325000 Z
+    - false
+  - - 46
+    - 400
+    - ''
+    - ''
+    - 40
+    - 2019-12-31 15:29:24.452265000 Z
+    - 2019-12-31 15:29:31.427745000 Z
+    - false
+  - - 47
+    - 100
+    - ''
+    - ''
+    - 40
+    - 2019-12-31 15:29:35.588453000 Z
+    - 2019-12-31 15:29:35.588453000 Z
+    - false
+  - - 48
+    - 200
+    - ''
+    - ''
+    - 40
+    - 2019-12-31 15:29:39.661823000 Z
+    - 2019-12-31 15:29:39.661823000 Z
+    - false
+  - - 49
+    - 700
+    - ''
+    - ''
+    - 39
+    - 2019-12-31 15:29:52.249826000 Z
+    - 2019-12-31 15:29:52.249826000 Z
+    - false
+  - - 50
+    - 100
+    - '"Count it all joy, my brothers, when you meet trials of various kinds, for
+      you know that the testing of your faith produces"  this'
+    - 'What is steadfastness
+
+      '
+    - 53
+    - 2019-12-31 15:32:55.386651000 Z
+    - 2020-01-04 18:56:59.143670000 Z
+    - false
+  - - 52
+    - 300
+    - Jesus is referred to as this in chapter 4
+    - What is the great high priest
+    - 51
+    - 2019-12-31 15:33:17.861718000 Z
+    - 2020-01-02 01:49:58.789724000 Z
+    - false
+  - - 53
+    - 500
+    - 'Who of the following is not mentioned in Hebrews 11.       Enoch, Samson, Esther,
+      Rahab, Abel
+
+      '
+    - 'Who is Esther '
+    - 51
+    - 2019-12-31 15:33:21.705937000 Z
+    - 2020-01-02 01:49:58.759377000 Z
+    - false
+  - - 54
+    - 100
+    - This chapter is often called the "Hall of Faith"
+    - What is chapter 11
+    - 51
+    - 2019-12-31 15:33:27.518239000 Z
+    - 2020-01-02 01:49:58.753306000 Z
+    - false
+  - - 55
+    - 200
+    - 'Hebrews 10:30 “For we know him who said, “Vengeance is mine; I will repay.”
+      And again, “The Lord will judge his people.” It is a fearful thing to fall into
+      ____”
+
+      '
+    - What is the hands of the Living God
+    - 51
+    - 2019-12-31 15:33:32.870816000 Z
+    - 2020-01-02 01:49:58.764657000 Z
+    - false
+  - - 56
+    - 100
+    - According to chapter 6, the Corinthians should avoid being yoked with this group
+    - Who are unbelievers
+    - 50
+    - 2019-12-31 15:33:50.677787000 Z
+    - 2020-01-02 01:49:58.745187000 Z
+    - false
+  - - 57
+    - 100
+    - This phrase completes the following verse. 1 Corinthians 13:1 “If I speak in
+      the tongues of men and angels, but have not love ____”
+    - 'What is I am a noisy gong or a clanging cymbal.
+
+      '
+    - 49
+    - 2019-12-31 15:33:54.574870000 Z
+    - 2020-01-02 01:49:58.683961000 Z
+    - false
+  - - 58
+    - 
+    - ''
+    - ''
+    - 54
+    - 2019-12-31 15:35:14.322695000 Z
+    - 2019-12-31 15:35:14.322695000 Z
+    - false
+  - - 59
+    - 200
+    - question
+    - answer
+    - 41
+    - 2019-12-31 15:39:17.170302000 Z
+    - 2019-12-31 15:39:27.068814000 Z
+    - false
+  - - 60
+    - 4200
+    - ''
+    - ''
+    - 40
+    - 2019-12-31 15:40:03.803866000 Z
+    - 2019-12-31 15:40:03.803866000 Z
+    - false
+  - - 61
+    - 300
+    - 'question '
+    - answer
+    - 55
+    - 2019-12-31 18:39:17.453085000 Z
+    - 2019-12-31 18:39:17.453085000 Z
+    - false
+  - - 62
+    - 100
+    - question
+    - answer
+    - 40
+    - 2019-12-31 19:22:38.777395000 Z
+    - 2019-12-31 19:22:38.777395000 Z
+    - false
+  - - 63
+    - 300
+    - question
+    - answer
+    - 55
+    - 2019-12-31 21:13:36.445782000 Z
+    - 2019-12-31 21:13:36.445782000 Z
+    - false
+  - - 64
+    - 200
+    - q
+    - a
+    - 38
+    - 2019-12-31 21:22:51.002266000 Z
+    - 2019-12-31 21:25:39.352651000 Z
+    - true
+  - - 65
+    - 100
+    - adsf
+    - asdfasdfads
+    - 59
+    - 2019-12-31 21:26:08.686797000 Z
+    - 2019-12-31 21:26:13.490495000 Z
+    - true
+  - - 66
+    - 100
+    - questin
+    - answer
+    - 60
+    - 2019-12-31 21:46:12.614528000 Z
+    - 2020-01-04 18:51:03.008997000 Z
+    - true
+  - - 67
+    - 300
+    - Paul insinuates this spiritual gift as being 'better' then the others
+    - 'what is prophesy
+
+      '
+    - 49
+    - 2020-01-01 16:22:41.617183000 Z
+    - 2020-01-02 01:49:58.696869000 Z
+    - false
+  - - 68
+    - 200
+    - In 1 Corinthians 12, this analogy is used to describe the church
+    - What is the Body
+    - 49
+    - 2020-01-01 16:24:35.177751000 Z
+    - 2020-01-02 01:49:58.671476000 Z
+    - false
+  - - 69
+    - 500
+    - 'Paul gives instruction in the 5th chapter as to how the church should deal
+      with a person who commits the sexual sin of having a relationship with his mother
+      or stepmother. He compares that person to this substance:
+
+      '
+    - What is leaven
+    - 49
+    - 2020-01-01 16:25:15.425548000 Z
+    - 2020-01-02 01:49:58.710266000 Z
+    - false
+  - - 70
+    - 300
+    - This 90s band's name is based on the second section of chapter 4
+    - Who is Jars of Clay
+    - 50
+    - 2020-01-01 16:27:28.009943000 Z
+    - 2020-01-02 01:49:58.718392000 Z
+    - false
+  - - 71
+    - 200
+    - Paul encourages the Corinthians to do this to the man who sinned
+    - What is forgiving
+    - 50
+    - 2020-01-01 16:33:13.687605000 Z
+    - 2020-01-02 01:49:58.738559000 Z
+    - false
+  - - 72
+    - 400
+    - Paul encourages the Corinthians to be generous in supporting a collection previously
+      mentioned in his first letter. This is the purpose of that collection
+    - What is Supporting the church in Jerusalem
+    - 50
+    - 2020-01-01 16:35:14.752126000 Z
+    - 2020-01-02 01:49:58.733342000 Z
+    - false
+  - - 73
+    - 100
+    - Zephaniah 1 prophesies about this day
+    - What is the day of the Lord
+    - 52
+    - 2020-01-01 16:43:15.212735000 Z
+    - 2020-01-04 18:04:33.237536000 Z
+    - false
+  - - 74
+    - 200
+    - The book has this many chapters
+    - What is 3
+    - 52
+    - 2020-01-01 16:44:04.453864000 Z
+    - 2020-01-02 01:49:58.798510000 Z
+    - false
+  - - 75
+    - 400
+    - According to Paul, nature itself teaches us this about a man who wears long
+      hair.
+    - What is a disgrace
+    - 49
+    - 2020-01-01 17:18:50.923768000 Z
+    - 2020-01-02 01:49:58.651323000 Z
+    - false
+  - - 76
+    - 500
+    - The passage, "But as you excel in everything--in faith, in speech, in knowledge,
+      in all earnestness, and in our love for you--see that you excel in this act
+      of grace also." is reffereing to what act
+    - What is a giving
+    - 50
+    - 2020-01-01 17:20:16.312832000 Z
+    - 2020-01-02 01:49:58.728080000 Z
+    - false
+  - - 77
+    - 400
+    - The passage, "He is without father or mother or genealogy, having neither beginning
+      of days nor end of life, but resembling the Son of God he continues a priest
+      forever." is reffering to this person.
+    - Who is Melchizedek
+    - 51
+    - 2020-01-01 17:20:57.078320000 Z
+    - 2020-01-02 01:49:58.770515000 Z
+    - false
+  - - 78
+    - 500
+    - This king was reigning when Zephaniah wrote his book
+    - Who is Josiah
+    - 52
+    - 2020-01-01 17:22:13.138392000 Z
+    - 2020-01-02 01:49:58.844963000 Z
+    - false
+  - - 79
+    - 300
+    - 'DAILY DOUBLE: A voice does this in the window'
+    - What is hoot
+    - 52
+    - 2020-01-01 17:27:43.359565000 Z
+    - 2020-01-02 01:49:58.810256000 Z
+    - false
+  - - 80
+    - 400
+    - Zephaniah ends his book describing the joy and restoration of this
+    - What is Israel
+    - 52
+    - 2020-01-01 17:32:45.236109000 Z
+    - 2020-01-02 01:49:58.823402000 Z
+    - false
+  - - 82
+    - 200
+    - Religion that is pure and undefiled before God is this
+    - What is visiting orphans and widows in their affliction
+    - 53
+    - 2020-01-01 17:48:56.427396000 Z
+    - 2020-01-02 01:49:58.891181000 Z
+    - false
+  - - 83
+    - 300
+    - This chapter in James talks about faith being dead without works
+    - What is chapter 2
+    - 53
+    - 2020-01-01 17:49:55.687143000 Z
+    - 2020-01-04 18:04:33.254032000 Z
+    - false
+  - - 84
+    - 400
+    - In James 3, these two metaphors are used to describe how the tongue is responsible
+      for guiding the whole body
+    - What is putting bits in the mouths of horses and the rudder of a ship
+    - 53
+    - 2020-01-01 17:51:27.386085000 Z
+    - 2020-01-02 01:49:58.882674000 Z
+    - false
+  - - 85
+    - 500
+    - " In James 5, this Old Testament character is mentioned as an example of someone
+      who prayed fervently"
+    - Who is Elijah
+    - 53
+    - 2020-01-01 17:52:09.236956000 Z
+    - 2020-01-02 01:49:58.900449000 Z
+    - false
+  - - 86
+    - 200
+    - This story in the first half of John is absent in the earlier manuscripts
+    - What is the woman caught in adultery
+    - 62
+    - 2020-01-01 17:55:48.684230000 Z
+    - 2020-01-02 01:49:58.935138000 Z
+    - false
+  - - 87
+    - 300
+    - This Greek word translated is “the word” from the beginning verses of John
+    - What is Logos
+    - 62
+    - 2020-01-01 17:56:34.189002000 Z
+    - 2020-01-02 01:49:58.949905000 Z
+    - false
+  - - 88
+    - 400
+    - The first three verses of John go like this
+    - What is "In the beginning was the Word, and the Word was with God, and the Word
+      was God. He was in the beginning with God. All things were made through him,
+      and without him was not any thing made that was made.”
+    - 62
+    - 2020-01-01 17:57:48.655985000 Z
+    - 2020-01-02 01:49:58.942661000 Z
+    - false
+  - - 89
+    - 100
+    - This character said the phrase, "He must increase, but I must decrease."d
+    - Who is John the baptist
+    - 62
+    - 2020-01-01 18:03:57.606833000 Z
+    - 2020-01-04 20:26:17.574786000 Z
+    - false
+  - - 90
+    - 500
+    - This many baskets of fragments were filled after Jesus fed the 5 thousand
+    - What is 12
+    - 62
+    - 2020-01-01 18:33:02.226802000 Z
+    - 2020-01-02 01:49:58.956831000 Z
+    - false
+  - - 91
+    - 200
+    - The blind man was born blind so that this could happen.
+    - What is the works of God being displayed in him
+    - 63
+    - 2020-01-01 18:33:55.662158000 Z
+    - 2020-01-02 01:49:58.999589000 Z
+    - false
+  - - 92
+    - 300
+    - When the helper comes, he will convict the world regarding these three things
+    - What is sin, righteousness, and judgment
+    - 63
+    - 2020-01-01 18:34:49.649351000 Z
+    - 2020-01-02 01:49:58.992358000 Z
+    - false
+  - - 93
+    - 100
+    - Jesus' long prayer before his arrest is called this.
+    - What is the high priestly prayer
+    - 63
+    - 2020-01-01 18:35:25.373609000 Z
+    - 2020-01-02 01:49:58.976680000 Z
+    - false
+  - - 94
+    - 400
+    - During Jesus' crucifixion, the plaque over his head bore a message in these
+      three languages
+    - What is Aramaic, Latin, and Greek
+    - 63
+    - 2020-01-01 18:37:22.154785000 Z
+    - 2020-01-02 01:49:58.983958000 Z
+    - false
+  - - 95
+    - 500
+    - Peter chopped the ear off of this soldier
+    - Who is Malchus
+    - 63
+    - 2020-01-01 18:37:55.326500000 Z
+    - 2020-01-04 18:04:33.268765000 Z
+    - false
+  - - 96
+    - 100
+    - q
+    - a
+    - 66
+    - 2020-01-04 20:34:32.315662000 Z
+    - 2020-01-04 20:34:32.315662000 Z
+    - false
+  - - 97
+    - 100
+    - q
+    - a
+    - 71
+    - 2020-01-04 20:45:33.196488000 Z
+    - 2020-01-04 20:45:33.196488000 Z
+    - false
+  - - 98
+    - 200
+    - In 1 Corinthians 12, this analogy is used to describe the church
+    - What is the Body
+    - 73
+    - 2020-01-04 20:47:03.560264000 Z
+    - 2020-01-04 20:47:03.560264000 Z
+    - false
+  - - 99
+    - 400
+    - According to Paul, nature itself teaches us this about a man who wears long
+      hair.
+    - What is a disgrace
+    - 73
+    - 2020-01-04 20:47:03.572900000 Z
+    - 2020-01-04 20:47:03.572900000 Z
+    - false
+  - - 100
+    - 100
+    - This phrase completes the following verse. 1 Corinthians 13:1 “If I speak in
+      the tongues of men and angels, but have not love ____”
+    - 'What is I am a noisy gong or a clanging cymbal.
+
+      '
+    - 73
+    - 2020-01-04 20:47:03.585656000 Z
+    - 2020-01-04 20:47:03.585656000 Z
+    - false
+  - - 101
+    - 300
+    - Paul insinuates this spiritual gift as being 'better' then the others
+    - 'what is prophesy
+
+      '
+    - 73
+    - 2020-01-04 20:47:03.614621000 Z
+    - 2020-01-04 20:47:03.614621000 Z
+    - false
+  - - 102
+    - 500
+    - 'Paul gives instruction in the 5th chapter as to how the church should deal
+      with a person who commits the sexual sin of having a relationship with his mother
+      or stepmother. He compares that person to this substance:
+
+      '
+    - What is leaven
+    - 73
+    - 2020-01-04 20:47:03.624999000 Z
+    - 2020-01-04 20:47:03.624999000 Z
+    - false
+  - - 103
+    - 500
+    - The passage, "But as you excel in everything--in faith, in speech, in knowledge,
+      in all earnestness, and in our love for you--see that you excel in this act
+      of grace also." is reffereing to what act
+    - What is a giving
+    - 74
+    - 2020-01-04 20:47:03.642472000 Z
+    - 2020-01-04 20:47:03.642472000 Z
+    - false
+  - - 104
+    - 400
+    - Paul encourages the Corinthians to be generous in supporting a collection previously
+      mentioned in his first letter. This is the purpose of that collection
+    - What is Supporting the church in Jerusalem
+    - 74
+    - 2020-01-04 20:47:03.651076000 Z
+    - 2020-01-04 20:47:03.651076000 Z
+    - false
+  - - 105
+    - 200
+    - Paul encourages the Corinthians to do this to the man who sinned
+    - What is forgiving
+    - 74
+    - 2020-01-04 20:47:03.669990000 Z
+    - 2020-01-04 20:47:03.669990000 Z
+    - false
+  - - 106
+    - 100
+    - According to chapter 6, the Corinthians should avoid being yoked with this group
+    - Who are unbelievers
+    - 74
+    - 2020-01-04 20:47:03.680033000 Z
+    - 2020-01-04 20:47:03.680033000 Z
+    - false
+  - - 107
+    - 300
+    - This 90s band's name is based on the second section of chapter 4
+    - Who is Jars of Clay
+    - 74
+    - 2020-01-04 20:47:03.688857000 Z
+    - 2020-01-04 20:47:03.688857000 Z
+    - false
+  - - 108
+    - 500
+    - 'Who of the following is not mentioned in Hebrews 11.       Enoch, Samson, Esther,
+      Rahab, Abel
+
+      '
+    - 'Who is Esther '
+    - 75
+    - 2020-01-04 20:47:03.706953000 Z
+    - 2020-01-04 20:47:03.706953000 Z
+    - false
+  - - 109
+    - 200
+    - 'Hebrews 10:30 “For we know him who said, “Vengeance is mine; I will repay.”
+      And again, “The Lord will judge his people.” It is a fearful thing to fall into
+      ____”
+
+      '
+    - What is the hands of the Living God
+    - 75
+    - 2020-01-04 20:47:03.718094000 Z
+    - 2020-01-04 20:47:03.718094000 Z
+    - false
+  - - 110
+    - 400
+    - The passage, "He is without father or mother or genealogy, having neither beginning
+      of days nor end of life, but resembling the Son of God he continues a priest
+      forever." is reffering to this person.
+    - Who is Melchizedek
+    - 75
+    - 2020-01-04 20:47:03.741175000 Z
+    - 2020-01-04 20:47:03.741175000 Z
+    - false
+  - - 111
+    - 300
+    - Jesus is referred to as this in chapter 4
+    - What is the great high priest
+    - 75
+    - 2020-01-04 20:47:03.751293000 Z
+    - 2020-01-04 20:47:03.751293000 Z
+    - false
+  - - 112
+    - 100
+    - This chapter is often called the "Hall of Faith"
+    - What is chapter 11
+    - 75
+    - 2020-01-04 20:47:03.890024000 Z
+    - 2020-01-04 20:47:03.890024000 Z
+    - false
+  - - 113
+    - 100
+    - Zephaniah 1 prophesies about this day
+    - What is the day of the Lord
+    - 76
+    - 2020-01-04 20:47:03.910346000 Z
+    - 2020-01-04 20:47:03.910346000 Z
+    - false
+  - - 114
+    - 200
+    - The book has this many chapters
+    - What is 3
+    - 76
+    - 2020-01-04 20:47:03.928034000 Z
+    - 2020-01-04 20:47:03.928034000 Z
+    - false
+  - - 115
+    - 300
+    - 'DAILY DOUBLE: A voice does this in the window'
+    - What is hoot
+    - 76
+    - 2020-01-04 20:47:03.938228000 Z
+    - 2020-01-04 20:47:03.938228000 Z
+    - false
+  - - 116
+    - 400
+    - Zephaniah ends his book describing the joy and restoration of this
+    - What is Israel
+    - 76
+    - 2020-01-04 20:47:03.950567000 Z
+    - 2020-01-04 20:47:03.950567000 Z
+    - false
+  - - 117
+    - 500
+    - This king was reigning when Zephaniah wrote his book
+    - Who is Josiah
+    - 76
+    - 2020-01-04 20:47:03.959705000 Z
+    - 2020-01-04 20:47:03.959705000 Z
+    - false
+  - - 118
+    - 100
+    - '"Count it all joy, my brothers, when you meet trials of various kinds, for
+      you know that the testing of your faith produces"  this'
+    - 'What is steadfastness
+
+      '
+    - 77
+    - 2020-01-04 20:47:03.980267000 Z
+    - 2020-01-04 20:47:03.980267000 Z
+    - false
+  - - 119
+    - 200
+    - Religion that is pure and undefiled before God is this
+    - What is visiting orphans and widows in their affliction
+    - 77
+    - 2020-01-04 20:47:04.001739000 Z
+    - 2020-01-04 20:47:04.001739000 Z
+    - false
+  - - 120
+    - 500
+    - " In James 5, this Old Testament character is mentioned as an example of someone
+      who prayed fervently"
+    - Who is Elijah
+    - 77
+    - 2020-01-04 20:47:04.010755000 Z
+    - 2020-01-04 20:47:04.010755000 Z
+    - false
+  - - 121
+    - 300
+    - This chapter in James talks about faith being dead without works
+    - What is chapter 2
+    - 77
+    - 2020-01-04 20:47:04.020717000 Z
+    - 2020-01-04 20:47:04.020717000 Z
+    - false
+  - - 122
+    - 400
+    - In James 3, these two metaphors are used to describe how the tongue is responsible
+      for guiding the whole body
+    - What is putting bits in the mouths of horses and the rudder of a ship
+    - 77
+    - 2020-01-04 20:47:04.030572000 Z
+    - 2020-01-04 20:47:04.030572000 Z
+    - false
+  - - 123
+    - 200
+    - This story in the first half of John is absent in the earlier manuscripts
+    - What is the woman caught in adultery
+    - 78
+    - 2020-01-04 20:47:04.049375000 Z
+    - 2020-01-04 20:47:04.049375000 Z
+    - false
+  - - 124
+    - 400
+    - The first three verses of John go like this
+    - What is "In the beginning was the Word, and the Word was with God, and the Word
+      was God. He was in the beginning with God. All things were made through him,
+      and without him was not any thing made that was made.”
+    - 78
+    - 2020-01-04 20:47:04.069925000 Z
+    - 2020-01-04 20:47:04.069925000 Z
+    - false
+  - - 125
+    - 300
+    - This Greek word translated is “the word” from the beginning verses of John
+    - What is Logos
+    - 78
+    - 2020-01-04 20:47:04.079715000 Z
+    - 2020-01-04 20:47:04.079715000 Z
+    - false
+  - - 126
+    - 500
+    - This many baskets of fragments were filled after Jesus fed the 5 thousand
+    - What is 12
+    - 78
+    - 2020-01-04 20:47:04.089365000 Z
+    - 2020-01-04 20:47:04.089365000 Z
+    - false
+  - - 127
+    - 100
+    - This character said the phrase, "He must increase, but I must decrease."d
+    - Who is John the baptist
+    - 78
+    - 2020-01-04 20:47:04.097968000 Z
+    - 2020-01-04 20:47:04.097968000 Z
+    - false
+  - - 128
+    - 100
+    - Jesus' long prayer before his arrest is called this.
+    - What is the high priestly prayer
+    - 79
+    - 2020-01-04 20:47:04.116082000 Z
+    - 2020-01-04 20:47:04.116082000 Z
+    - false
+  - - 129
+    - 400
+    - During Jesus' crucifixion, the plaque over his head bore a message in these
+      three languages
+    - What is Aramaic, Latin, and Greek
+    - 79
+    - 2020-01-04 20:47:04.135368000 Z
+    - 2020-01-04 20:47:04.135368000 Z
+    - false
+  - - 130
+    - 300
+    - When the helper comes, he will convict the world regarding these three things
+    - What is sin, righteousness, and judgment
+    - 79
+    - 2020-01-04 20:47:04.145906000 Z
+    - 2020-01-04 20:47:04.145906000 Z
+    - false
+  - - 131
+    - 200
+    - The blind man was born blind so that this could happen.
+    - What is the works of God being displayed in him
+    - 79
+    - 2020-01-04 20:47:04.158193000 Z
+    - 2020-01-04 20:47:04.158193000 Z
+    - false
+  - - 132
+    - 500
+    - Peter chopped the ear off of this soldier
+    - Who is Malchus
+    - 79
+    - 2020-01-04 20:47:04.167531000 Z
+    - 2020-01-04 20:47:04.167531000 Z
+    - false
+  - - 133
+    - 200
+    - In 1 Corinthians 12, this analogy is used to describe the church
+    - What is the Body
+    - 80
+    - 2020-01-04 20:49:06.647256000 Z
+    - 2020-01-04 20:49:06.647256000 Z
+    - false
+  - - 134
+    - 400
+    - According to Paul, nature itself teaches us this about a man who wears long
+      hair.
+    - What is a disgrace
+    - 80
+    - 2020-01-04 20:49:06.663776000 Z
+    - 2020-01-04 20:49:06.663776000 Z
+    - false
+  - - 135
+    - 100
+    - This phrase completes the following verse. 1 Corinthians 13:1 “If I speak in
+      the tongues of men and angels, but have not love ____”
+    - 'What is I am a noisy gong or a clanging cymbal.
+
+      '
+    - 80
+    - 2020-01-04 20:49:06.681195000 Z
+    - 2020-01-04 20:49:06.681195000 Z
+    - false
+  - - 136
+    - 300
+    - Paul insinuates this spiritual gift as being 'better' then the others
+    - 'what is prophesy
+
+      '
+    - 80
+    - 2020-01-04 20:49:06.694562000 Z
+    - 2020-01-04 20:49:06.694562000 Z
+    - false
+  - - 137
+    - 500
+    - 'Paul gives instruction in the 5th chapter as to how the church should deal
+      with a person who commits the sexual sin of having a relationship with his mother
+      or stepmother. He compares that person to this substance:
+
+      '
+    - What is leaven
+    - 80
+    - 2020-01-04 20:49:06.711531000 Z
+    - 2020-01-04 20:49:06.711531000 Z
+    - false
+  - - 138
+    - 500
+    - The passage, "But as you excel in everything--in faith, in speech, in knowledge,
+      in all earnestness, and in our love for you--see that you excel in this act
+      of grace also." is reffereing to what act
+    - What is a giving
+    - 81
+    - 2020-01-04 20:49:06.752901000 Z
+    - 2020-01-04 20:49:06.752901000 Z
+    - false
+  - - 139
+    - 400
+    - Paul encourages the Corinthians to be generous in supporting a collection previously
+      mentioned in his first letter. This is the purpose of that collection
+    - What is Supporting the church in Jerusalem
+    - 81
+    - 2020-01-04 20:49:06.824521000 Z
+    - 2020-01-04 20:49:06.824521000 Z
+    - false
+  - - 140
+    - 200
+    - Paul encourages the Corinthians to do this to the man who sinned
+    - What is forgiving
+    - 81
+    - 2020-01-04 20:49:06.926752000 Z
+    - 2020-01-04 20:49:06.926752000 Z
+    - false
+  - - 141
+    - 100
+    - According to chapter 6, the Corinthians should avoid being yoked with this group
+    - Who are unbelievers
+    - 81
+    - 2020-01-04 20:49:06.955126000 Z
+    - 2020-01-04 20:49:06.955126000 Z
+    - false
+  - - 142
+    - 300
+    - This 90s band's name is based on the second section of chapter 4
+    - Who is Jars of Clay
+    - 81
+    - 2020-01-04 20:49:06.971224000 Z
+    - 2020-01-04 20:49:06.971224000 Z
+    - false
+  - - 143
+    - 500
+    - 'Who of the following is not mentioned in Hebrews 11.       Enoch, Samson, Esther,
+      Rahab, Abel
+
+      '
+    - 'Who is Esther '
+    - 82
+    - 2020-01-04 20:49:07.006222000 Z
+    - 2020-01-04 20:49:07.006222000 Z
+    - false
+  - - 144
+    - 200
+    - 'Hebrews 10:30 “For we know him who said, “Vengeance is mine; I will repay.”
+      And again, “The Lord will judge his people.” It is a fearful thing to fall into
+      ____”
+
+      '
+    - What is the hands of the Living God
+    - 82
+    - 2020-01-04 20:49:07.020691000 Z
+    - 2020-01-04 20:49:07.020691000 Z
+    - false
+  - - 145
+    - 400
+    - The passage, "He is without father or mother or genealogy, having neither beginning
+      of days nor end of life, but resembling the Son of God he continues a priest
+      forever." is reffering to this person.
+    - Who is Melchizedek
+    - 82
+    - 2020-01-04 20:49:07.033284000 Z
+    - 2020-01-04 20:49:07.033284000 Z
+    - false
+  - - 146
+    - 300
+    - Jesus is referred to as this in chapter 4
+    - What is the great high priest
+    - 82
+    - 2020-01-04 20:49:07.046059000 Z
+    - 2020-01-04 20:49:07.046059000 Z
+    - false
+  - - 147
+    - 100
+    - This chapter is often called the "Hall of Faith"
+    - What is chapter 11
+    - 82
+    - 2020-01-04 20:49:07.058358000 Z
+    - 2020-01-04 20:49:07.058358000 Z
+    - false
+  - - 148
+    - 100
+    - Zephaniah 1 prophesies about this day
+    - What is the day of the Lord
+    - 83
+    - 2020-01-04 20:49:07.092841000 Z
+    - 2020-01-04 20:49:07.092841000 Z
+    - false
+  - - 149
+    - 200
+    - The book has this many chapters
+    - What is 3
+    - 83
+    - 2020-01-04 20:49:07.104675000 Z
+    - 2020-01-04 20:49:07.104675000 Z
+    - false
+  - - 150
+    - 300
+    - 'DAILY DOUBLE: A voice does this in the window'
+    - What is hoot
+    - 83
+    - 2020-01-04 20:49:07.114006000 Z
+    - 2020-01-04 20:49:07.114006000 Z
+    - false
+  - - 151
+    - 400
+    - Zephaniah ends his book describing the joy and restoration of this
+    - What is Israel
+    - 83
+    - 2020-01-04 20:49:07.126753000 Z
+    - 2020-01-04 20:49:07.126753000 Z
+    - false
+  - - 152
+    - 500
+    - This king was reigning when Zephaniah wrote his book
+    - Who is Josiah
+    - 83
+    - 2020-01-04 20:49:07.148637000 Z
+    - 2020-01-04 20:49:07.148637000 Z
+    - false
+  - - 153
+    - 100
+    - '"Count it all joy, my brothers, when you meet trials of various kinds, for
+      you know that the testing of your faith produces"  this'
+    - 'What is steadfastness
+
+      '
+    - 84
+    - 2020-01-04 20:49:07.169575000 Z
+    - 2020-01-04 20:49:07.169575000 Z
+    - false
+  - - 154
+    - 200
+    - Religion that is pure and undefiled before God is this
+    - What is visiting orphans and widows in their affliction
+    - 84
+    - 2020-01-04 20:49:07.179966000 Z
+    - 2020-01-04 20:49:07.179966000 Z
+    - false
+  - - 155
+    - 500
+    - " In James 5, this Old Testament character is mentioned as an example of someone
+      who prayed fervently"
+    - Who is Elijah
+    - 84
+    - 2020-01-04 20:49:07.190304000 Z
+    - 2020-01-04 20:49:07.190304000 Z
+    - false
+  - - 156
+    - 300
+    - This chapter in James talks about faith being dead without works
+    - What is chapter 2
+    - 84
+    - 2020-01-04 20:49:07.212444000 Z
+    - 2020-01-04 20:49:07.212444000 Z
+    - false
+  - - 157
+    - 400
+    - In James 3, these two metaphors are used to describe how the tongue is responsible
+      for guiding the whole body
+    - What is putting bits in the mouths of horses and the rudder of a ship
+    - 84
+    - 2020-01-04 20:49:07.221179000 Z
+    - 2020-01-04 20:49:07.221179000 Z
+    - false
+  - - 158
+    - 200
+    - This story in the first half of John is absent in the earlier manuscripts
+    - What is the woman caught in adultery
+    - 85
+    - 2020-01-04 20:49:07.247032000 Z
+    - 2020-01-04 20:49:07.247032000 Z
+    - false
+  - - 159
+    - 400
+    - The first three verses of John go like this
+    - What is "In the beginning was the Word, and the Word was with God, and the Word
+      was God. He was in the beginning with God. All things were made through him,
+      and without him was not any thing made that was made.”
+    - 85
+    - 2020-01-04 20:49:07.260633000 Z
+    - 2020-01-04 20:49:07.260633000 Z
+    - false
+  - - 160
+    - 300
+    - This Greek word translated is “the word” from the beginning verses of John
+    - What is Logos
+    - 85
+    - 2020-01-04 20:49:07.284180000 Z
+    - 2020-01-04 20:49:07.284180000 Z
+    - false
+  - - 161
+    - 500
+    - This many baskets of fragments were filled after Jesus fed the 5 thousand
+    - What is 12
+    - 85
+    - 2020-01-04 20:49:07.301810000 Z
+    - 2020-01-04 20:49:07.301810000 Z
+    - false
+  - - 162
+    - 100
+    - This character said the phrase, "He must increase, but I must decrease."d
+    - Who is John the baptist
+    - 85
+    - 2020-01-04 20:49:07.316353000 Z
+    - 2020-01-04 20:49:07.316353000 Z
+    - false
+  - - 163
+    - 100
+    - Jesus' long prayer before his arrest is called this.
+    - What is the high priestly prayer
+    - 86
+    - 2020-01-04 20:49:07.350293000 Z
+    - 2020-01-04 20:49:07.350293000 Z
+    - false
+  - - 164
+    - 400
+    - During Jesus' crucifixion, the plaque over his head bore a message in these
+      three languages
+    - What is Aramaic, Latin, and Greek
+    - 86
+    - 2020-01-04 20:49:07.369512000 Z
+    - 2020-01-04 20:49:07.369512000 Z
+    - false
+  - - 165
+    - 300
+    - When the helper comes, he will convict the world regarding these three things
+    - What is sin, righteousness, and judgment
+    - 86
+    - 2020-01-04 20:49:07.396274000 Z
+    - 2020-01-04 20:49:07.396274000 Z
+    - false
+  - - 166
+    - 200
+    - The blind man was born blind so that this could happen.
+    - What is the works of God being displayed in him
+    - 86
+    - 2020-01-04 20:49:07.429135000 Z
+    - 2020-01-04 20:49:07.429135000 Z
+    - false
+  - - 167
+    - 500
+    - Peter chopped the ear off of this soldier
+    - Who is Malchus
+    - 86
+    - 2020-01-04 20:49:07.477892000 Z
+    - 2020-01-04 20:49:07.477892000 Z
+    - false
+  - - 168
+    - 200
+    - In 1 Corinthians 12, this analogy is used to describe the church
+    - What is the Body
+    - 87
+    - 2020-01-04 20:52:03.422679000 Z
+    - 2020-01-04 20:52:03.422679000 Z
+    - false
+  - - 169
+    - 400
+    - According to Paul, nature itself teaches us this about a man who wears long
+      hair.
+    - What is a disgrace
+    - 87
+    - 2020-01-04 20:52:03.440861000 Z
+    - 2020-01-04 20:52:03.440861000 Z
+    - false
+  - - 170
+    - 100
+    - This phrase completes the following verse. 1 Corinthians 13:1 “If I speak in
+      the tongues of men and angels, but have not love ____”
+    - 'What is I am a noisy gong or a clanging cymbal.
+
+      '
+    - 87
+    - 2020-01-04 20:52:03.461984000 Z
+    - 2020-01-04 20:52:03.461984000 Z
+    - false
+  - - 171
+    - 300
+    - Paul insinuates this spiritual gift as being 'better' then the others
+    - 'what is prophesy
+
+      '
+    - 87
+    - 2020-01-04 20:52:03.476116000 Z
+    - 2020-01-04 20:52:03.476116000 Z
+    - false
+  - - 172
+    - 500
+    - 'Paul gives instruction in the 5th chapter as to how the church should deal
+      with a person who commits the sexual sin of having a relationship with his mother
+      or stepmother. He compares that person to this substance:
+
+      '
+    - What is leaven
+    - 87
+    - 2020-01-04 20:52:03.488863000 Z
+    - 2020-01-04 20:52:03.488863000 Z
+    - false
+  - - 173
+    - 500
+    - The passage, "But as you excel in everything--in faith, in speech, in knowledge,
+      in all earnestness, and in our love for you--see that you excel in this act
+      of grace also." is reffereing to what act
+    - What is a giving
+    - 88
+    - 2020-01-04 20:52:03.520978000 Z
+    - 2020-01-04 20:52:03.520978000 Z
+    - false
+  - - 174
+    - 400
+    - Paul encourages the Corinthians to be generous in supporting a collection previously
+      mentioned in his first letter. This is the purpose of that collection
+    - What is Supporting the church in Jerusalem
+    - 88
+    - 2020-01-04 20:52:03.627214000 Z
+    - 2020-01-04 20:52:03.627214000 Z
+    - false
+  - - 175
+    - 200
+    - Paul encourages the Corinthians to do this to the man who sinned
+    - What is forgiving
+    - 88
+    - 2020-01-04 20:52:03.678026000 Z
+    - 2020-01-04 20:52:03.678026000 Z
+    - false
+  - - 176
+    - 100
+    - According to chapter 6, the Corinthians should avoid being yoked with this group
+    - Who are unbelievers
+    - 88
+    - 2020-01-04 20:52:03.697147000 Z
+    - 2020-01-04 20:52:03.697147000 Z
+    - false
+  - - 177
+    - 300
+    - This 90s band's name is based on the second section of chapter 4
+    - Who is Jars of Clay
+    - 88
+    - 2020-01-04 20:52:03.712981000 Z
+    - 2020-01-04 20:52:03.712981000 Z
+    - false
+  - - 178
+    - 500
+    - 'Who of the following is not mentioned in Hebrews 11.       Enoch, Samson, Esther,
+      Rahab, Abel
+
+      '
+    - 'Who is Esther '
+    - 89
+    - 2020-01-04 20:52:03.741218000 Z
+    - 2020-01-04 20:52:03.741218000 Z
+    - false
+  - - 179
+    - 200
+    - 'Hebrews 10:30 “For we know him who said, “Vengeance is mine; I will repay.”
+      And again, “The Lord will judge his people.” It is a fearful thing to fall into
+      ____”
+
+      '
+    - What is the hands of the Living God
+    - 89
+    - 2020-01-04 20:52:03.757476000 Z
+    - 2020-01-04 20:52:03.757476000 Z
+    - false
+  - - 180
+    - 400
+    - The passage, "He is without father or mother or genealogy, having neither beginning
+      of days nor end of life, but resembling the Son of God he continues a priest
+      forever." is reffering to this person.
+    - Who is Melchizedek
+    - 89
+    - 2020-01-04 20:52:03.773725000 Z
+    - 2020-01-04 20:52:03.773725000 Z
+    - false
+  - - 181
+    - 300
+    - Jesus is referred to as this in chapter 4
+    - What is the great high priest
+    - 89
+    - 2020-01-04 20:52:03.785947000 Z
+    - 2020-01-04 20:52:03.785947000 Z
+    - false
+  - - 182
+    - 100
+    - This chapter is often called the "Hall of Faith"
+    - What is chapter 11
+    - 89
+    - 2020-01-04 20:52:03.797237000 Z
+    - 2020-01-04 20:52:03.797237000 Z
+    - false
+  - - 183
+    - 100
+    - Zephaniah 1 prophesies about this day
+    - What is the day of the Lord
+    - 90
+    - 2020-01-04 20:52:03.817888000 Z
+    - 2020-01-04 20:52:03.817888000 Z
+    - false
+  - - 184
+    - 200
+    - The book has this many chapters
+    - What is 3
+    - 90
+    - 2020-01-04 20:52:03.829983000 Z
+    - 2020-01-04 20:52:03.829983000 Z
+    - false
+  - - 185
+    - 300
+    - 'DAILY DOUBLE: A voice does this in the window'
+    - What is hoot
+    - 90
+    - 2020-01-04 20:52:03.840799000 Z
+    - 2020-01-04 20:52:03.840799000 Z
+    - false
+  - - 186
+    - 400
+    - Zephaniah ends his book describing the joy and restoration of this
+    - What is Israel
+    - 90
+    - 2020-01-04 20:52:03.850198000 Z
+    - 2020-01-04 20:52:03.850198000 Z
+    - false
+  - - 187
+    - 500
+    - This king was reigning when Zephaniah wrote his book
+    - Who is Josiah
+    - 90
+    - 2020-01-04 20:52:03.862390000 Z
+    - 2020-01-04 20:52:03.862390000 Z
+    - false
+  - - 188
+    - 100
+    - '"Count it all joy, my brothers, when you meet trials of various kinds, for
+      you know that the testing of your faith produces"  this'
+    - 'What is steadfastness
+
+      '
+    - 91
+    - 2020-01-04 20:52:03.902930000 Z
+    - 2020-01-04 20:52:03.902930000 Z
+    - false
+  - - 189
+    - 200
+    - Religion that is pure and undefiled before God is this
+    - What is visiting orphans and widows in their affliction
+    - 91
+    - 2020-01-04 20:52:03.913762000 Z
+    - 2020-01-04 20:52:03.913762000 Z
+    - false
+  - - 190
+    - 500
+    - " In James 5, this Old Testament character is mentioned as an example of someone
+      who prayed fervently"
+    - Who is Elijah
+    - 91
+    - 2020-01-04 20:52:03.927638000 Z
+    - 2020-01-04 20:52:03.927638000 Z
+    - false
+  - - 191
+    - 300
+    - This chapter in James talks about faith being dead without works
+    - What is chapter 2
+    - 91
+    - 2020-01-04 20:52:03.941007000 Z
+    - 2020-01-04 20:52:03.941007000 Z
+    - false
+  - - 192
+    - 400
+    - In James 3, these two metaphors are used to describe how the tongue is responsible
+      for guiding the whole body
+    - What is putting bits in the mouths of horses and the rudder of a ship
+    - 91
+    - 2020-01-04 20:52:03.954396000 Z
+    - 2020-01-04 20:52:03.954396000 Z
+    - false
+  - - 193
+    - 200
+    - This story in the first half of John is absent in the earlier manuscripts
+    - What is the woman caught in adultery
+    - 92
+    - 2020-01-04 20:52:03.979799000 Z
+    - 2020-01-04 20:52:03.979799000 Z
+    - false
+  - - 194
+    - 400
+    - The first three verses of John go like this
+    - What is "In the beginning was the Word, and the Word was with God, and the Word
+      was God. He was in the beginning with God. All things were made through him,
+      and without him was not any thing made that was made.”
+    - 92
+    - 2020-01-04 20:52:03.992739000 Z
+    - 2020-01-04 20:52:03.992739000 Z
+    - false
+  - - 195
+    - 300
+    - This Greek word translated is “the word” from the beginning verses of John
+    - What is Logos
+    - 92
+    - 2020-01-04 20:52:04.008253000 Z
+    - 2020-01-04 20:52:04.008253000 Z
+    - false
+  - - 196
+    - 500
+    - This many baskets of fragments were filled after Jesus fed the 5 thousand
+    - What is 12
+    - 92
+    - 2020-01-04 20:52:04.060436000 Z
+    - 2020-01-04 20:52:04.060436000 Z
+    - false
+  - - 197
+    - 100
+    - This character said the phrase, "He must increase, but I must decrease."d
+    - Who is John the baptist
+    - 92
+    - 2020-01-04 20:52:04.094735000 Z
+    - 2020-01-04 20:52:04.094735000 Z
+    - false
+  - - 198
+    - 100
+    - Jesus' long prayer before his arrest is called this.
+    - What is the high priestly prayer
+    - 93
+    - 2020-01-04 20:52:04.265587000 Z
+    - 2020-01-04 20:52:04.265587000 Z
+    - false
+  - - 199
+    - 400
+    - During Jesus' crucifixion, the plaque over his head bore a message in these
+      three languages
+    - What is Aramaic, Latin, and Greek
+    - 93
+    - 2020-01-04 20:52:04.286467000 Z
+    - 2020-01-04 20:52:04.286467000 Z
+    - false
+  - - 200
+    - 300
+    - When the helper comes, he will convict the world regarding these three things
+    - What is sin, righteousness, and judgment
+    - 93
+    - 2020-01-04 20:52:04.306268000 Z
+    - 2020-01-04 20:52:04.306268000 Z
+    - false
+  - - 201
+    - 200
+    - The blind man was born blind so that this could happen.
+    - What is the works of God being displayed in him
+    - 93
+    - 2020-01-04 20:52:04.325202000 Z
+    - 2020-01-04 20:52:04.325202000 Z
+    - false
+  - - 202
+    - 500
+    - Peter chopped the ear off of this soldier
+    - Who is Malchus
+    - 93
+    - 2020-01-04 20:52:04.346813000 Z
+    - 2020-01-04 20:52:04.346813000 Z
+    - false
+  - - 203
+    - 200
+    - In 1 Corinthians 12, this analogy is used to describe the church
+    - What is the Body
+    - 94
+    - 2020-01-04 20:58:15.077547000 Z
+    - 2020-01-04 20:58:15.077547000 Z
+    - false
+  - - 204
+    - 400
+    - According to Paul, nature itself teaches us this about a man who wears long
+      hair.
+    - What is a disgrace
+    - 94
+    - 2020-01-04 20:58:15.090826000 Z
+    - 2020-01-04 20:58:15.090826000 Z
+    - false
+  - - 205
+    - 100
+    - This phrase completes the following verse. 1 Corinthians 13:1 “If I speak in
+      the tongues of men and angels, but have not love ____”
+    - 'What is I am a noisy gong or a clanging cymbal.
+
+      '
+    - 94
+    - 2020-01-04 20:58:15.105599000 Z
+    - 2020-01-04 20:58:15.105599000 Z
+    - false
+  - - 206
+    - 300
+    - Paul insinuates this spiritual gift as being 'better' then the others
+    - 'what is prophesy
+
+      '
+    - 94
+    - 2020-01-04 20:58:15.121067000 Z
+    - 2020-01-04 20:58:15.121067000 Z
+    - false
+  - - 207
+    - 500
+    - 'Paul gives instruction in the 5th chapter as to how the church should deal
+      with a person who commits the sexual sin of having a relationship with his mother
+      or stepmother. He compares that person to this substance:
+
+      '
+    - What is leaven
+    - 94
+    - 2020-01-04 20:58:15.137395000 Z
+    - 2020-01-04 20:58:15.137395000 Z
+    - false
+  - - 208
+    - 500
+    - The passage, "But as you excel in everything--in faith, in speech, in knowledge,
+      in all earnestness, and in our love for you--see that you excel in this act
+      of grace also." is reffereing to what act
+    - What is a giving
+    - 95
+    - 2020-01-04 20:58:15.165557000 Z
+    - 2020-01-04 20:58:15.165557000 Z
+    - false
+  - - 209
+    - 400
+    - Paul encourages the Corinthians to be generous in supporting a collection previously
+      mentioned in his first letter. This is the purpose of that collection
+    - What is Supporting the church in Jerusalem
+    - 95
+    - 2020-01-04 20:58:15.184531000 Z
+    - 2020-01-04 20:58:15.184531000 Z
+    - false
+  - - 210
+    - 200
+    - Paul encourages the Corinthians to do this to the man who sinned
+    - What is forgiving
+    - 95
+    - 2020-01-04 20:58:15.198477000 Z
+    - 2020-01-04 20:58:15.198477000 Z
+    - false
+  - - 211
+    - 100
+    - According to chapter 6, the Corinthians should avoid being yoked with this group
+    - Who are unbelievers
+    - 95
+    - 2020-01-04 20:58:15.221197000 Z
+    - 2020-01-04 20:58:15.221197000 Z
+    - false
+  - - 212
+    - 300
+    - This 90s band's name is based on the second section of chapter 4
+    - Who is Jars of Clay
+    - 95
+    - 2020-01-04 20:58:15.335504000 Z
+    - 2020-01-04 20:58:15.335504000 Z
+    - false
+  - - 213
+    - 500
+    - 'Who of the following is not mentioned in Hebrews 11.       Enoch, Samson, Esther,
+      Rahab, Abel
+
+      '
+    - 'Who is Esther '
+    - 96
+    - 2020-01-04 20:58:15.381903000 Z
+    - 2020-01-04 20:58:15.381903000 Z
+    - false
+  - - 214
+    - 200
+    - 'Hebrews 10:30 “For we know him who said, “Vengeance is mine; I will repay.”
+      And again, “The Lord will judge his people.” It is a fearful thing to fall into
+      ____”
+
+      '
+    - What is the hands of the Living God
+    - 96
+    - 2020-01-04 20:58:15.394767000 Z
+    - 2020-01-04 20:58:15.394767000 Z
+    - false
+  - - 215
+    - 400
+    - The passage, "He is without father or mother or genealogy, having neither beginning
+      of days nor end of life, but resembling the Son of God he continues a priest
+      forever." is reffering to this person.
+    - Who is Melchizedek
+    - 96
+    - 2020-01-04 20:58:15.405186000 Z
+    - 2020-01-04 20:58:15.405186000 Z
+    - false
+  - - 216
+    - 300
+    - Jesus is referred to as this in chapter 4
+    - What is the great high priest
+    - 96
+    - 2020-01-04 20:58:15.573474000 Z
+    - 2020-01-04 20:58:15.573474000 Z
+    - false
+  - - 217
+    - 100
+    - This chapter is often called the "Hall of Faith"
+    - What is chapter 11
+    - 96
+    - 2020-01-04 20:58:15.585593000 Z
+    - 2020-01-04 20:58:15.585593000 Z
+    - false
+  - - 218
+    - 100
+    - Zephaniah 1 prophesies about this day
+    - What is the day of the Lord
+    - 97
+    - 2020-01-04 20:58:15.609330000 Z
+    - 2020-01-04 20:58:15.609330000 Z
+    - false
+  - - 219
+    - 200
+    - The book has this many chapters
+    - What is 3
+    - 97
+    - 2020-01-04 20:58:15.622040000 Z
+    - 2020-01-04 20:58:15.622040000 Z
+    - false
+  - - 220
+    - 300
+    - 'DAILY DOUBLE: A voice does this in the window'
+    - What is hoot
+    - 97
+    - 2020-01-04 20:58:15.652556000 Z
+    - 2020-01-04 20:58:15.652556000 Z
+    - false
+  - - 221
+    - 400
+    - Zephaniah ends his book describing the joy and restoration of this
+    - What is Israel
+    - 97
+    - 2020-01-04 20:58:15.668776000 Z
+    - 2020-01-04 20:58:15.668776000 Z
+    - false
+  - - 222
+    - 500
+    - This king was reigning when Zephaniah wrote his book
+    - Who is Josiah
+    - 97
+    - 2020-01-04 20:58:15.798017000 Z
+    - 2020-01-04 20:58:15.798017000 Z
+    - false
+  - - 223
+    - 100
+    - '"Count it all joy, my brothers, when you meet trials of various kinds, for
+      you know that the testing of your faith produces"  this'
+    - 'What is steadfastness
+
+      '
+    - 98
+    - 2020-01-04 20:58:15.849046000 Z
+    - 2020-01-04 20:58:15.849046000 Z
+    - false
+  - - 224
+    - 200
+    - Religion that is pure and undefiled before God is this
+    - What is visiting orphans and widows in their affliction
+    - 98
+    - 2020-01-04 20:58:15.864262000 Z
+    - 2020-01-04 20:58:15.864262000 Z
+    - false
+  - - 225
+    - 500
+    - " In James 5, this Old Testament character is mentioned as an example of someone
+      who prayed fervently"
+    - Who is Elijah
+    - 98
+    - 2020-01-04 20:58:15.872712000 Z
+    - 2020-01-04 20:58:15.872712000 Z
+    - false
+  - - 226
+    - 300
+    - This chapter in James talks about faith being dead without works
+    - What is chapter 2
+    - 98
+    - 2020-01-04 20:58:15.883934000 Z
+    - 2020-01-04 20:58:15.883934000 Z
+    - false
+  - - 227
+    - 400
+    - In James 3, these two metaphors are used to describe how the tongue is responsible
+      for guiding the whole body
+    - What is putting bits in the mouths of horses and the rudder of a ship
+    - 98
+    - 2020-01-04 20:58:15.894189000 Z
+    - 2020-01-04 20:58:15.894189000 Z
+    - false
+  - - 228
+    - 200
+    - This story in the first half of John is absent in the earlier manuscripts
+    - What is the woman caught in adultery
+    - 99
+    - 2020-01-04 20:58:15.916499000 Z
+    - 2020-01-04 20:58:15.916499000 Z
+    - false
+  - - 229
+    - 400
+    - The first three verses of John go like this
+    - What is "In the beginning was the Word, and the Word was with God, and the Word
+      was God. He was in the beginning with God. All things were made through him,
+      and without him was not any thing made that was made.”
+    - 99
+    - 2020-01-04 20:58:15.928697000 Z
+    - 2020-01-04 20:58:15.928697000 Z
+    - false
+  - - 230
+    - 300
+    - This Greek word translated is “the word” from the beginning verses of John
+    - What is Logos
+    - 99
+    - 2020-01-04 20:58:15.939737000 Z
+    - 2020-01-04 20:58:15.939737000 Z
+    - false
+  - - 231
+    - 500
+    - This many baskets of fragments were filled after Jesus fed the 5 thousand
+    - What is 12
+    - 99
+    - 2020-01-04 20:58:15.951952000 Z
+    - 2020-01-04 20:58:15.951952000 Z
+    - false
+  - - 232
+    - 100
+    - This character said the phrase, "He must increase, but I must decrease."d
+    - Who is John the baptist
+    - 99
+    - 2020-01-04 20:58:15.963719000 Z
+    - 2020-01-04 20:58:15.963719000 Z
+    - false
+  - - 233
+    - 100
+    - Jesus' long prayer before his arrest is called this.
+    - What is the high priestly prayer
+    - 100
+    - 2020-01-04 20:58:15.985740000 Z
+    - 2020-01-04 20:58:15.985740000 Z
+    - false
+  - - 234
+    - 400
+    - During Jesus' crucifixion, the plaque over his head bore a message in these
+      three languages
+    - What is Aramaic, Latin, and Greek
+    - 100
+    - 2020-01-04 20:58:15.997644000 Z
+    - 2020-01-04 20:58:15.997644000 Z
+    - false
+  - - 235
+    - 300
+    - When the helper comes, he will convict the world regarding these three things
+    - What is sin, righteousness, and judgment
+    - 100
+    - 2020-01-04 20:58:16.007738000 Z
+    - 2020-01-04 20:58:16.007738000 Z
+    - false
+  - - 236
+    - 200
+    - The blind man was born blind so that this could happen.
+    - What is the works of God being displayed in him
+    - 100
+    - 2020-01-04 20:58:16.024392000 Z
+    - 2020-01-04 20:58:16.024392000 Z
+    - false
+  - - 237
+    - 500
+    - Peter chopped the ear off of this soldier
+    - Who is Malchus
+    - 100
+    - 2020-01-04 20:58:16.039741000 Z
+    - 2020-01-04 20:58:16.039741000 Z
+    - false
+
+---
+players:
+  columns:
+  - id
+  - name
+  - ratio
+  - luck
+  - wins
+  - losses
+  - luckwins
+  - lucklosses
+  - one_to_three_wins
+  - three_to_one_wins
+  - streak
+  - streak_count
+  - calculator_id
+  - stats
+  - roll_count
+  records: 
+  - - 48
+    - Josh
+    - '0.0'
+    - '0.0'
+    - 0
+    - 0
+    - '0.0'
+    - '0.0'
+    - 0
+    - 0
+    - 0
+    - 0
+    - 18
+    - "[]"
+    - '{"three_a_two_d":{"total":0,"a_wins_two":{"count":0,"standard_percentage":37.17,"actual_percentage":0,"deviation":0},"d_wins_two":{"count":0,"standard_percentage":29.26,"actual_percentage":0,"deviation":0},"tie":{"count":0,"standard_percentage":33.58,"actual_percentage":0,"deviation":0}},"two_a_two_d":{"total":0,"a_wins_two":{"count":0,"standard_percentage":22.76,"actual_percentage":0,"deviation":0},"d_wins_two":{"count":0,"standard_percentage":44.83,"actual_percentage":0,"deviation":0},"tie":{"count":0,"standard_percentage":32.41,"actual_percentage":0,"deviation":0}},"one_a_two_d":{"total":1,"a_wins":{"count":0,"standard_percentage":25.46,"actual_percentage":0,"deviation":0},"d_wins":{"count":0,"standard_percentage":74.54,"actual_percentage":0,"deviation":0}},"three_a_one_d":{"total":0,"a_wins":{"count":0,"standard_percentage":65.97,"actual_percentage":0,"deviation":0},"d_wins":{"count":0,"standard_percentage":34.03,"actual_percentage":0,"deviation":0}},"two_a_one_d":{"total":0,"a_wins":{"count":0,"standard_percentage":57.87,"actual_percentage":0,"deviation":0},"d_wins":{"count":0,"standard_percentage":42.13,"actual_percentage":0,"deviation":0}},"one_a_one_d":{"total":0,"a_wins":{"count":0,"standard_percentage":41.67,"actual_percentage":0,"deviation":0},"d_wins":{"count":0,"standard_percentage":58.33,"actual_percentage":0,"deviation":0}}}'
+  - - 49
+    - Ben
+    - '0.0'
+    - '0.0'
+    - 0
+    - 0
+    - '0.0'
+    - '0.0'
+    - 0
+    - 0
+    - 6
+    - 5
+    - 18
+    - "[]"
+    - '{"three_a_two_d":{"total":1,"a_wins_two":{"count":0,"standard_percentage":37.17,"actual_percentage":0,"deviation":0},"d_wins_two":{"count":0,"standard_percentage":29.26,"actual_percentage":0,"deviation":0},"tie":{"count":1,"standard_percentage":33.58,"actual_percentage":1.0,"deviation":0.0298}},"two_a_two_d":{"total":1,"a_wins_two":{"count":0,"standard_percentage":22.76,"actual_percentage":0,"deviation":0},"d_wins_two":{"count":0,"standard_percentage":44.83,"actual_percentage":0,"deviation":0},"tie":{"count":1,"standard_percentage":32.41,"actual_percentage":1.0,"deviation":0.0309}},"one_a_two_d":{"total":2,"a_wins":{"count":0,"standard_percentage":25.46,"actual_percentage":0,"deviation":0},"d_wins":{"count":0,"standard_percentage":74.54,"actual_percentage":0,"deviation":0}},"three_a_one_d":{"total":0,"a_wins":{"count":0,"standard_percentage":65.97,"actual_percentage":0,"deviation":0},"d_wins":{"count":0,"standard_percentage":34.03,"actual_percentage":0,"deviation":0}},"two_a_one_d":{"total":0,"a_wins":{"count":0,"standard_percentage":57.87,"actual_percentage":0,"deviation":0},"d_wins":{"count":0,"standard_percentage":42.13,"actual_percentage":0,"deviation":0}},"one_a_one_d":{"total":3,"a_wins":{"count":0,"standard_percentage":41.67,"actual_percentage":0,"deviation":0},"d_wins":{"count":0,"standard_percentage":58.33,"actual_percentage":0,"deviation":0}}}'
+  - - 50
+    - Hey
+    - '0.0'
+    - '0.0'
+    - 0
+    - 0
+    - '0.0'
+    - '0.0'
+    - 0
+    - 0
+    - 0
+    - 0
+    - 18
+    - "[]"
+    - '{"three_a_two_d":{"total":0,"a_wins_two":{"count":0,"standard_percentage":37.17,"actual_percentage":0,"deviation":0},"d_wins_two":{"count":0,"standard_percentage":29.26,"actual_percentage":0,"deviation":0},"tie":{"count":0,"standard_percentage":33.58,"actual_percentage":0,"deviation":0}},"two_a_two_d":{"total":0,"a_wins_two":{"count":0,"standard_percentage":22.76,"actual_percentage":0,"deviation":0},"d_wins_two":{"count":0,"standard_percentage":44.83,"actual_percentage":0,"deviation":0},"tie":{"count":0,"standard_percentage":32.41,"actual_percentage":0,"deviation":0}},"one_a_two_d":{"total":0,"a_wins":{"count":0,"standard_percentage":25.46,"actual_percentage":0,"deviation":0},"d_wins":{"count":0,"standard_percentage":74.54,"actual_percentage":0,"deviation":0}},"three_a_one_d":{"total":0,"a_wins":{"count":0,"standard_percentage":65.97,"actual_percentage":0,"deviation":0},"d_wins":{"count":0,"standard_percentage":34.03,"actual_percentage":0,"deviation":0}},"two_a_one_d":{"total":0,"a_wins":{"count":0,"standard_percentage":57.87,"actual_percentage":0,"deviation":0},"d_wins":{"count":0,"standard_percentage":42.13,"actual_percentage":0,"deviation":0}},"one_a_one_d":{"total":0,"a_wins":{"count":0,"standard_percentage":41.67,"actual_percentage":0,"deviation":0},"d_wins":{"count":0,"standard_percentage":58.33,"actual_percentage":0,"deviation":0}}}'
+
+---
+rolls:
+  columns:
+  - id
+  - created_at
+  - updated_at
+  - player1
+  - player2
+  - die1
+  - die2
+  - calculator_id
+  - attacker
+  - defender
+  - winner
+  - ratio
+  - number
+  records: 
+  - - 65
+    - 2019-12-30 22:57:12.545584000 Z
+    - 2019-12-30 22:57:12.545584000 Z
+    - 
+    - 
+    - 
+    - 
+    - 18
+    - Ben
+    - Josh
+    - Ben
+    - 1-1
+    - 1
+  - - 66
+    - 2019-12-30 23:00:37.316527000 Z
+    - 2019-12-30 23:00:37.316527000 Z
+    - 
+    - 
+    - 
+    - 
+    - 18
+    - Josh
+    - Ben
+    - tie
+    - 1-2
+    - 1
+  - - 67
+    - 2019-12-30 23:01:48.518511000 Z
+    - 2019-12-30 23:01:48.518511000 Z
+    - 
+    - 
+    - 
+    - 
+    - 18
+    - Ben
+    - Josh
+    - Ben
+    - 1-1
+    - 1
+  - - 68
+    - 2019-12-30 23:02:16.125553000 Z
+    - 2019-12-30 23:02:16.125553000 Z
+    - 
+    - 
+    - 
+    - 
+    - 18
+    - Ben
+    - Josh
+    - Ben
+    - 1-1
+    - 2
+  - - 69
+    - 2019-12-30 23:02:31.480245000 Z
+    - 2019-12-30 23:02:31.480245000 Z
+    - 
+    - 
+    - 
+    - 
+    - 18
+    - Ben
+    - Josh
+    - tie
+    - 1-2
+    - 2
+  - - 70
+    - 2019-12-30 23:05:38.457035000 Z
+    - 2019-12-30 23:05:38.457035000 Z
+    - 
+    - 
+    - 
+    - 
+    - 18
+    - Ben
+    - Josh
+    - tie
+    - 1-2
+    - 1
+  - - 71
+    - 2019-12-30 23:11:20.956517000 Z
+    - 2019-12-30 23:11:20.956517000 Z
+    - 
+    - 
+    - 
+    - 
+    - 18
+    - Ben
+    - Josh
+    - tie
+    - 3-2
+    - 1
+  - - 72
+    - 2019-12-30 23:11:33.029886000 Z
+    - 2019-12-30 23:11:33.029886000 Z
+    - 
+    - 
+    - 
+    - 
+    - 18
+    - Ben
+    - Josh
+    - tie
+    - 2-2
+    - 2
+
+---
+teams:
+  columns:
+  - id
+  - name
+  - score
+  - jeopardy_game_id
+  - created_at
+  - updated_at
+  records: 
+  - - 12
+    - Team1
+    - 500
+    - 6
+    - 2019-12-31 18:53:40.130045000 Z
+    - 2019-12-31 21:44:06.846503000 Z
+  - - 13
+    - Team2
+    - -400
+    - 6
+    - 2019-12-31 18:53:45.273462000 Z
+    - 2019-12-31 21:44:06.860554000 Z
+  - - 14
+    - Team 1
+    - 200
+    - 19
+    - 2019-12-31 21:45:54.798892000 Z
+    - 2020-01-04 20:26:58.490364000 Z
+  - - 19
+    - Team 1
+    - -1400
+    - 18
+    - 2020-01-01 14:40:12.127213000 Z
+    - 2020-01-04 20:25:28.721357000 Z
+  - - 20
+    - Team 2
+    - -2100
+    - 18
+    - 2020-01-01 14:40:17.669598000 Z
+    - 2020-01-04 20:25:28.704824000 Z
+  - - 22
+    - Team 2
+    - 500
+    - 19
+    - 2020-01-04 18:33:39.868136000 Z
+    - 2020-01-04 20:26:58.497507000 Z
+  - - 23
+    - Team 3
+    - 0
+    - 18
+    - 2020-01-04 20:33:44.616913000 Z
+    - 2020-01-04 20:33:44.616913000 Z
+  - - 24
+    - dasf
+    - 0
+    - 8
+    - 2020-01-04 20:34:39.240159000 Z
+    - 2020-01-04 20:34:39.240159000 Z
+  - - 25
+    - da
+    - 0
+    - 25
+    - 2020-01-04 20:46:06.251540000 Z
+    - 2020-01-04 20:46:06.251540000 Z
+  - - 26
+    - Team 2
+    - 
+    - 27
+    - 2020-01-04 20:49:07.490445000 Z
+    - 2020-01-04 20:49:07.490445000 Z
+  - - 27
+    - Team 1
+    - 
+    - 27
+    - 2020-01-04 20:49:07.505976000 Z
+    - 2020-01-04 20:49:07.505976000 Z
+  - - 29
+    - Team 2
+    - 
+    - 28
+    - 2020-01-04 20:52:04.383160000 Z
+    - 2020-01-04 20:52:04.383160000 Z
+  - - 30
+    - Team 1
+    - 
+    - 28
+    - 2020-01-04 20:52:04.404594000 Z
+    - 2020-01-04 20:52:04.404594000 Z
+  - - 31
+    - Team 2
+    - -2100
+    - 29
+    - 2020-01-04 20:58:16.049269000 Z
+    - 2020-01-04 20:58:16.049269000 Z
+  - - 32
+    - Team 1
+    - -1400
+    - 29
+    - 2020-01-04 20:58:16.057770000 Z
+    - 2020-01-04 20:58:16.057770000 Z
+  - - 33
+    - Team 3
+    - 600
+    - 29
+    - 2020-01-04 20:58:16.063877000 Z
+    - 2020-01-04 21:01:18.906616000 Z
+
+---
+users:
+  columns:
+  - id
+  - created_at
+  - updated_at
+  - name
+  - password_digest
+  records: 
+  - - 1
+    - 2019-12-10 03:40:18.356555000 Z
+    - 2019-12-10 03:40:18.356555000 Z
+    - Josh
+    - "$2a$10$2yu9qjWg65UAT1opqYvKEOYdx.bEr8ejoolv.49DrciT75lX7Hahi"
+  - - 2
+    - 2020-01-04 19:31:32.517376000 Z
+    - 2020-01-04 19:31:32.517376000 Z
+    - Frodo
+    - "$2a$10$m/j.zvTu0CLRBL.bpxO91e12J/ih0Z31TXw3lpSbKH5yQ3IfPiaeW"
