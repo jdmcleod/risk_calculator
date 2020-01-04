@@ -38,6 +38,7 @@ Rails.application.routes.draw do
       post 'no_answer'
       post 'toggle_scope'
       post 'save_game'
+      post 'change_name'
     end
   end
 

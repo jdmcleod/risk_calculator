@@ -9,6 +9,7 @@
     - current_user.jeopardy_games.each do |game|
       .card.game-panel
         h3.game-title = "#{game.name}"
+        i.m-0.em = game.user.name
         = link_to "View", game, class: 'btn btn-outline-success mt-3'
         = link_to "Delete", game, method: :delete, class: 'btn btn-outline-danger mt-3',
           data: { confirm: "Are you sure you want to delete this game?"}
@@ -17,6 +18,7 @@
     - @all_games.each do |game|
       .card.game-panel
         h3.game-title = "#{game.name}"
+        i.m-0 = game.user.name
         = link_to "View", game, class: 'btn btn-outline-success mt-3'
 
 

@@ -53,6 +53,7 @@ export default class JeopardyGame extends React.Component {
         return {
           categories: data.categories,
           teams: data.teams,
+          gameName: data.name,
           showPanelForm: false
         }
       })
@@ -71,6 +72,16 @@ export default class JeopardyGame extends React.Component {
 
   addTeam() {
     fetch(`/jeopardy_games/${this.props.id}/add_team.json`, {
+      headers: { 'Content-Type': 'application/json' },
+      method: 'POST',
+      body: JSON.stringify({
+       name: this.state.categoryName
+      })
+    })
+  }
+
+  handleChangeName() {
+    fetch(`/jeopardy_games/${this.props.id}/change_name.json`, {
       headers: { 'Content-Type': 'application/json' },
       method: 'POST',
       body: JSON.stringify({
@@ -386,6 +397,7 @@ export default class JeopardyGame extends React.Component {
             <button className='btn btn-outline-info mt-2' onClick={() => this.addCategory()}>add category</button>
             <button className='btn btn-outline-info mt-2' onClick={() => this.addTeam()}>add team</button>
             <button className='btn btn-outline-warning mt-2' onClick={() => this.resetPanels()}>reset panels</button>
+            <button className='btn btn-outline-primary mt-2' onClick={() => this.handleChangeName()}>change name</button>
             {this.renderToggleScopeButton()}
           </div>
         </div>

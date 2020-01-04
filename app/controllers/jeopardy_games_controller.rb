@@ -70,6 +70,17 @@ class JeopardyGamesController < ApplicationController
     head :ok
   end
 
+  def change_name
+    @jeopardy_game = JeopardyGame.find(params[:id])
+    name = params[:jeopardy_game][:name]
+    @jeopardy_game.update(name: name)
+    @jeopardy_game.save
+
+    pusher_update_game
+
+    head :ok
+  end
+
   def remove_category
     @jeopardy_game = JeopardyGame.find(params[:id])
     @jeopardy_game.categories.find(params[:category_id]).destroy
@@ -203,7 +214,7 @@ class JeopardyGamesController < ApplicationController
       end
       format.json {
         render json: { categories: @jeopardy_game.state[:categories],
-                       teams: @jeopardy_game.teams }
+                       teams: @jeopardy_game.teams, name: @jeopardy_game.name }
       }
     end
   end
