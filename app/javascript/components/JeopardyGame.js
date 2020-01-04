@@ -14,6 +14,7 @@ export default class JeopardyGame extends React.Component {
 
     this.state = {
       id: this.props.id,
+      game_name: this.props.game_name,
       categories: this.props.categories,
       teams: this.props.teams,
       categoryName: '',
@@ -26,7 +27,7 @@ export default class JeopardyGame extends React.Component {
       panelAnswer: '',
       selectedPanel: '',
       editPanel: false,
-      showControlPanel: false
+      editMode: false
     }
   }
 
@@ -188,10 +189,10 @@ export default class JeopardyGame extends React.Component {
     })
   }
 
-  handleScore(teamId, sign) {
-    let ammount = 0
-    if (sign === 'positive') ammount = this.state.selectedPanel.ammount
-    if (sign === 'negative') ammount = (this.state.selectedPanel.ammount * -1)
+  handleScore(teamId, sign, ammountOverride) {
+    let ammount = this.state.selectedPanel.ammount
+    if (ammountOverride) ammount = ammountOverride
+    if (sign === 'negative') ammount = (ammount * -1)
     fetch(`/jeopardy_games/${this.props.id}/add_score.json`, {
       headers: { 'Content-Type': 'application/json' },
       method: 'POST',
@@ -268,7 +269,7 @@ export default class JeopardyGame extends React.Component {
     return this.state.categories.map(category => {
       return (
         <div key={category.name} className='card category'>
-          <h5 className='text-align-center mt-2'>{category.name}</h5>
+          <h5 className='category-name'>{category.name}</h5>
           {this.renderPanels(category)}
           {this.renderPanelControls(category)}
         </div>
@@ -277,7 +278,7 @@ export default class JeopardyGame extends React.Component {
   }
 
   renderPanelControls(category) {
-    if (this.state.showControlPanel) {
+    if (this.state.editMode) {
       return (
         <div className='m-1'>
           <button className='btn btn-outline-secondary w-100' onClick={() => this.showPanelForm(category.id, false)}>+</button>
@@ -348,7 +349,7 @@ export default class JeopardyGame extends React.Component {
   }
 
   renderControlPanel() {
-    if (this.state.showControlPanel) {
+    if (this.state.editMode) {
       return (
         <div className='flex-column control-panel'>
           <h5 className='text-align-center'>Control Panel</h5>
@@ -377,11 +378,11 @@ export default class JeopardyGame extends React.Component {
     this.setState({ panelAnswer: event.target.value });
   }
 
-  toggleShowControlPanel() {
-    if (this.state.showControlPanel === false) {
-      this.setState({showControlPanel: true})
+  toggleeditMode() {
+    if (this.state.editMode === false) {
+      this.setState({editMode: true})
     } else {
-      this.setState({showControlPanel: false})
+      this.setState({editMode: false})
     }
   }
 
@@ -389,10 +390,10 @@ export default class JeopardyGame extends React.Component {
     return (
       <div>
         <div className='justify-center'>
-          <h1 className='mt-3'>Bible Study Trivia</h1>
-          <button className='btn btn-outline-secondary show-control-panel' onClick={() => this.toggleShowControlPanel()}>Edit</button>
+          <h1 className='mt-3'>{this.state.game_name}</h1>
+          <button className='btn btn-outline-secondary show-control-panel' onClick={() => this.toggleeditMode()}>Edit</button>
         </div>
-        <Teams teams={this.state.teams} removeTeam={this.removeTeam.bind(this)}/>
+        <Teams teams={this.state.teams} removeTeam={this.removeTeam.bind(this)} editMode={this.state.editMode} handleScore={this.handleScore.bind(this)}/>
         <div className='flex justify-center p-2'>
           {this.renderPanelForm()}
           {this.renderCategories()}

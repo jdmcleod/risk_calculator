@@ -6,12 +6,12 @@
         = render 'shared/user_error_messages'
         = f.label :name
         = f.text_field :name, class: 'form-control'
-        = f.label :password
+        = f.label :password, class: 'mt-2'
         = f.password_field :password, class: 'form-control'
-        = f.label :password_confirmation, "Confirmation"
+        = f.label :password_confirmation, "Confirmation", class: 'mt-2'
         = f.password_field :password_confirmation, class: 'form-control'
         .m-auto.text-center
-          = f.submit "Create my account", class: "btn btn-primary w-50 mt-3"
+          = f.submit "Create my account", class: "btn btn-outline-primary w-50 mt-3"
         .mt-2
           | Already have an account?
           =<> link_to "Login", login_path

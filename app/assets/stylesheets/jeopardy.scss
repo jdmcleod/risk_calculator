@@ -113,12 +113,15 @@ h1, h2, h3, h4, h5, p {
   border: solid #c8d7f1;
 }
 
-.remove-player {
-  border: none;
-  color: rgb(82, 82, 82);
-  font-size: 1.2rem;
-
+.icon {
   &:hover {
-    color: rgb(154, 0, 0);
+    cursor: pointer;
   }
+}
+
+.category-name {
+  margin: 10px;
+  text-align: center;
+  white-space: nowrap;
+  overflow-x: scroll;
 }

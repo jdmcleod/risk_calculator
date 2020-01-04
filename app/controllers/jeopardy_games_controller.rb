@@ -73,7 +73,7 @@ class JeopardyGamesController < ApplicationController
     @jeopardy_game = JeopardyGame.find(params[:id])
     team = @jeopardy_game.teams.find(params[:team_id])
     team.update(score: team.score += params[:ammount].to_i)
-    @jeopardy_game.categories.find(params[:category_id]).panels.find(params[:panel_id]).update(completed: true)
+    @jeopardy_game.categories.find(params[:category_id]).panels.find(params[:panel_id]).update(completed: true) if params[:category_id]
     @jeopardy_game.save
     pusher_update_game
 
