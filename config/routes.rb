@@ -23,23 +23,4 @@ Rails.application.routes.draw do
       patch 'add_player'
     end
   end
-
-  resources :jeopardy_games do
-    member do
-      post 'add_category'
-      post 'remove_category'
-      post 'add_panel'
-      post 'remove_panel'
-      patch 'edit_panel'
-      post 'add_team'
-      post 'remove_team'
-      post 'add_score'
-      post 'reset_panels'
-      post 'no_answer'
-      post 'toggle_scope'
-      post 'save_game'
-      post 'change_name'
-    end
-  end
-
 end

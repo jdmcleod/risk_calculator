@@ -4,5 +4,4 @@ class User < ApplicationRecord
   has_secure_password
 
   has_many :calculators
-  has_many  :jeopardy_games
 end
